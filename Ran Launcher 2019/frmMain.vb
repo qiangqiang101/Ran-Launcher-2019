@@ -1,47 +1,33 @@
 ﻿Public Class frmMain
 
-    Private hlp As New frmHelp
+    Dim WithEvents doc As HtmlDocument
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        html.Url = New Uri($"{My.Application.Info.DirectoryPath}\Launcher\Background\background.html")
+        html.Url = New Uri($"{My.Application.Info.DirectoryPath}\Data\Launcher\background.html")
+        Cursor = New Cursor(LoadCursorFromFile(normal_Cur))
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Close()
+    Private Sub html_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles html.DocumentCompleted
+        doc = CType(sender, WebBrowser).Document
+        Text = html.DocumentTitle
     End Sub
 
-    Public Sub ShowButtons()
-        btnExit.Show()
-        btnHelp.Show()
-        btnNews.Show()
-        btnPlay.Show()
-        btnReg.Show()
-        btnWeb.Show()
-    End Sub
+    Private Sub doc_Click(sender As Object, e As HtmlElementEventArgs) Handles doc.Click
+        Dim ce = doc.DomDocument.parentWindow.event.srcElement
 
-    Public Sub HideButtons()
-        btnExit.Hide()
-        btnHelp.Hide()
-        btnNews.Hide()
-        btnPlay.Hide()
-        btnReg.Hide()
-        btnWeb.Hide()
-    End Sub
+        Select Case ce.id
+            Case "window"
+                If FormBorderStyle = BorderStyle.None Then
+                    FormBorderStyle = FormBorderStyle.Sizable
+                    WindowState = FormWindowState.Normal
+                Else
+                    FormBorderStyle = FormBorderStyle.None
+                    WindowState = FormWindowState.Maximized
+                End If
+            Case "exitok"
+                Close()
+            Case "play"
 
-    Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
-        hlp = New frmHelp
-        hlp.TopLevel = False
-        hlp.Parent = html
-        html.Controls.Add(hlp)
-        hlp.Show()
-        hlp.TopMost = True
-        hlp.Location = New Point(Width / 2 - hlp.Width / 2, Height / 2 - hlp.Height / 2)
-        HideButtons()
-    End Sub
-
-    Protected Overrides Sub OnResizeEnd(e As EventArgs)
-        MyBase.OnResizeEnd(e)
-
-        hlp.Location = New Point(Width / 2 - hlp.Width / 2, Height / 2 - hlp.Height / 2)
+        End Select
     End Sub
 End Class
