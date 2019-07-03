@@ -51,7 +51,7 @@ Partial Class frmMain
         Me.MinimumSize = New System.Drawing.Size(1024, 768)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "勇Online"
         Me.ResumeLayout(False)
 
     End Sub

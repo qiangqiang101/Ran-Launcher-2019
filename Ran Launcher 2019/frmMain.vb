@@ -1,9 +1,10 @@
 ﻿Public Class frmMain
 
     Dim WithEvents doc As HtmlDocument
+    Private upd As New frmUpdate
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        html.Url = New Uri($"{My.Application.Info.DirectoryPath}\Data\Launcher\background.html")
+        html.Url = New Uri($"{Application.StartupPath}\Data\Launcher\background.html")
         Cursor = New Cursor(LoadCursorFromFile(normal_Cur))
     End Sub
 
@@ -27,7 +28,19 @@
             Case "exitok"
                 Close()
             Case "play"
-
+                upd = New frmUpdate
+                upd.TopLevel = False
+                upd.Parent = html
+                html.Controls.Add(upd)
+                upd.TopMost = True
+                upd.Location = New Point(Width / 2 - upd.Width / 2, Height / 2 - upd.Height / 2)
+                upd.Show()
         End Select
+    End Sub
+
+    Protected Overrides Sub OnSizeChanged(e As EventArgs)
+        MyBase.OnSizeChanged(e)
+
+        upd.Location = New Point(Width / 2 - upd.Width / 2, Height / 2 - upd.Height / 2)
     End Sub
 End Class
