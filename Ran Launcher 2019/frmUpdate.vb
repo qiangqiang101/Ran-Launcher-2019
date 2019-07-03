@@ -12,8 +12,8 @@ Public Class frmUpdate
 
     Private Sub frmUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckForIllegalCrossThreadCalls = False
-        Cursor = New Cursor(LoadCursorFromFile(normal_Cur))
-        html.Url = New Uri($"{Application.StartupPath}\Data\Launcher\slideshow.html")
+
+        html.RunPage(UpdHtml)
 
         cl = New Client(clFile).Instance
         Dim cfu As Integer = CheckForUpdate()
@@ -23,13 +23,13 @@ Public Class frmUpdate
             pbOverall.Maximum = cfu
         Else
             lblStatus.Text = "暫無更新。"
-            processStart($"{Application.StartupPath}\miniA.exe", "app_run")
+            processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
             frmMain.Close()
         End If
     End Sub
 
     Private Sub DownloadUpdate()
-        Dim patchAddress As String = $"https://raw.githubusercontent.com/qiangqiang101/LaunchMenuUpdate/master/download/patch{cl.CurrentVersion + 1}.zip"
+        Dim patchAddress As String = $"{Htmls.conf.PatchAddress}patch{cl.CurrentVersion + 1}.zip"
         Dim patchFile As String = $"{Application.StartupPath}\patch.zip"
         wc.DownloadFileAsync(New Uri(patchAddress), patchFile)
     End Sub
@@ -37,7 +37,7 @@ Public Class frmUpdate
     Private Function CheckForUpdate() As Integer
         Dim client As WebClient = New WebClient()
 
-        Dim reader As StreamReader = New StreamReader(client.OpenRead("https://raw.githubusercontent.com/qiangqiang101/LaunchMenuUpdate/master/ver.txt"))
+        Dim reader As StreamReader = New StreamReader(client.OpenRead(Htmls.conf.ServerVersion))
         Return CInt(reader.ReadToEnd)
     End Function
 
@@ -101,7 +101,7 @@ Public Class frmUpdate
                 DownloadUpdate()
             Else
                 lblStatus.Text = "暫無更新"
-                processStart($"{Application.StartupPath}\miniA.exe", "app_run")
+                processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
                 frmMain.Close()
             End If
         End If

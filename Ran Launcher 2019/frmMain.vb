@@ -4,8 +4,7 @@
     Private upd As New frmUpdate
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        html.Url = New Uri($"{Application.StartupPath}\Data\Launcher\background.html")
-        Cursor = New Cursor(LoadCursorFromFile(normal_Cur))
+        html.RunPage(MainHtml)
     End Sub
 
     Private Sub html_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles html.DocumentCompleted
