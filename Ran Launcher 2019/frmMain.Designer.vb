@@ -22,8 +22,11 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.html = New System.Windows.Forms.WebBrowser()
+        Me.html2 = New System.Windows.Forms.WebBrowser()
+        Me.tKey = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'html
@@ -40,12 +43,32 @@ Partial Class frmMain
         Me.html.Url = New System.Uri("", System.UriKind.Relative)
         Me.html.WebBrowserShortcutsEnabled = False
         '
+        'html2
+        '
+        Me.html2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.html2.IsWebBrowserContextMenuEnabled = False
+        Me.html2.Location = New System.Drawing.Point(0, 0)
+        Me.html2.MinimumSize = New System.Drawing.Size(23, 23)
+        Me.html2.Name = "html2"
+        Me.html2.ScriptErrorsSuppressed = True
+        Me.html2.ScrollBarsEnabled = False
+        Me.html2.Size = New System.Drawing.Size(1344, 729)
+        Me.html2.TabIndex = 1
+        Me.html2.Url = New System.Uri("", System.UriKind.Relative)
+        Me.html2.WebBrowserShortcutsEnabled = False
+        '
+        'tKey
+        '
+        Me.tKey.Enabled = True
+        Me.tKey.Interval = 30
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1344, 729)
+        Me.Controls.Add(Me.html2)
         Me.Controls.Add(Me.html)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -59,4 +82,6 @@ Partial Class frmMain
     End Sub
 
     Friend WithEvents html As WebBrowser
+    Friend WithEvents html2 As WebBrowser
+    Friend WithEvents tKey As Timer
 End Class

@@ -21,6 +21,11 @@ Public Structure Conf
     Public Argument As String
     Public PatchAddress As String
     Public ServerVersion As String
+    Public UseRemoteHtml As Boolean
+    Public RemoteHtml As String
+    Public UseRemoteIntroHtml As Boolean
+    Public RemoteIntroHtml As String
+    Public IntroWaitDuration As Integer
     Public FullScreen As Boolean
 
     Public Sub New(fn As String)

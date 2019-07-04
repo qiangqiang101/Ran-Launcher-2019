@@ -434,6 +434,37 @@ function showSlides() {
 </body>
 </html>"
 
+    Public IntroHtml As String = "<head>
+<title>" & conf.ServerName & "</title>
+<meta http-equiv=""X-UA-Compatible"" content=""IE=9"" charset=""utf-8"" />
+<style>
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+</style>
+</head>
+
+<body>
+<!-- The video -->
+<video autoplay muted id=""myVideo"">
+  <source src=""" & Application.StartupPath & "\Data\Launcher\videos\intro.mp4"" type=""video/mp4"">
+</video>
+</body>
+
+<script>
+</script>"
+
     <Extension>
     Public Sub RunPage(browser As WebBrowser, html As String)
         Try

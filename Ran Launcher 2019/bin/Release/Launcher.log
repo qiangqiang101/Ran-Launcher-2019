@@ -10,3 +10,9 @@
    at System.Diagnostics.Process.Start()
    at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
    at Ran_Launcher_2019.Helper.processStart(String filename, String arg) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 6
+7/5/2019 3:14:45 AM:Object reference not set to an instance of an object.   at Ran_Launcher_2019.Htmls.RunPage(WebBrowser browser, String html) in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Htmls.vb:line 472
+7/5/2019 3:14:57 AM:Object reference not set to an instance of an object.   at Ran_Launcher_2019.Htmls.RunPage(WebBrowser browser, String html) in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Htmls.vb:line 472
+7/5/2019 3:15:14 AM:Object reference not set to an instance of an object.   at Ran_Launcher_2019.Htmls.RunPage(WebBrowser browser, String html) in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Htmls.vb:line 472
+7/5/2019 5:12:02 AM:There is an error in XML document (14, 73).   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at Ran_Launcher_2019.Conf.ReadFromFile() in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Config.vb:line 47

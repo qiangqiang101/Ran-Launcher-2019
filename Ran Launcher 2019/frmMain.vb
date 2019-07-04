@@ -4,7 +4,7 @@
     Private upd As New frmUpdate
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        html.RunPage(MainHtml)
+        Text = Htmls.conf.ServerName
 
         If Htmls.conf.FullScreen Then
             FormBorderStyle = FormBorderStyle.None
@@ -59,4 +59,38 @@
             Htmls.conf.Save()
         End If
     End Sub
+
+    Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        If Htmls.conf.UseRemoteIntroHtml Then
+            html2.Url = New Uri($"{Htmls.conf.RemoteIntroHtml}")
+            Wait(Htmls.conf.IntroWaitDuration * 2)
+            If html2.Visible Then
+                html2.Visible = False
+                If Htmls.conf.UseRemoteHtml Then
+                    html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
+                Else
+                    html.RunPage(MainHtml)
+                End If
+            End If
+        Else
+            html2.RunPage(IntroHtml)
+            Wait(Htmls.conf.IntroWaitDuration)
+            If html2.Visible Then
+                html2.Visible = False
+                If Htmls.conf.UseRemoteHtml Then
+                    html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
+                Else
+                    html.RunPage(MainHtml)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub tKey_Tick(sender As Object, e As EventArgs) Handles tKey.Tick
+        If (GetAsyncKeyState(Keys.Escape) OrElse GetAsyncKeyState(Keys.Enter) OrElse GetAsyncKeyState(Keys.Space)) AndAlso html2.Visible Then
+            html2.Hide()
+            html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
+        End If
+    End Sub
+
 End Class

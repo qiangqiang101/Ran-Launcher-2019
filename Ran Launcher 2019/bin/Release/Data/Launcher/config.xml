@@ -9,5 +9,10 @@
   <Argument>app_run</Argument>
   <PatchAddress>https://raw.githubusercontent.com/qiangqiang101/LaunchMenuUpdate/master/download/</PatchAddress>
   <ServerVersion>https://raw.githubusercontent.com/qiangqiang101/LaunchMenuUpdate/master/ver.txt</ServerVersion>
-  <FullScreen>true</FullScreen>
+  <UseRemoteHtml>false</UseRemoteHtml>
+  <RemoteHtml>https://www.imnotmental.com/ran/</RemoteHtml>
+  <UseRemoteIntroHtml>false</UseRemoteIntroHtml>
+  <RemoteIntroHtml>https://www.imnotmental.com/ran/intro.html</RemoteIntroHtml>
+  <IntroWaitDuration>3500</IntroWaitDuration>
+  <FullScreen>false</FullScreen>
 </Conf>

@@ -1,4 +1,8 @@
-﻿Module Helper
+﻿Imports System.IO
+
+Module Helper
+
+    Public Declare Function GetAsyncKeyState Lib "user32" (ByVal vKey As Integer) As Integer
 
     Public Sub processStart(ByVal filename As String, ByVal arg As String)
         Try
@@ -17,6 +21,17 @@
             Logger.Log(ex.Message, ex.StackTrace)
             MsgBox(ex.Message, MsgBoxStyle.Critical, "出錯了")
         End Try
+    End Sub
+
+    Public Sub Wait(ByVal interval As Integer)
+        Dim stopW As New Stopwatch
+        stopW.Start()
+        Do While stopW.ElapsedMilliseconds < interval
+            ' Allows your UI to remain responsive
+            If Application.OpenForms.Count = 0 Then End
+            Application.DoEvents()
+        Loop
+        stopW.Stop()
     End Sub
 
 End Module
