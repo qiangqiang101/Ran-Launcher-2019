@@ -5,6 +5,11 @@
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         html.RunPage(MainHtml)
+
+        If Htmls.conf.FullScreen Then
+            FormBorderStyle = FormBorderStyle.None
+            WindowState = FormWindowState.Maximized
+        End If
     End Sub
 
     Private Sub html_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles html.DocumentCompleted
@@ -41,5 +46,17 @@
         MyBase.OnSizeChanged(e)
 
         upd.Location = New Point(Width / 2 - upd.Width / 2, Height / 2 - upd.Height / 2)
+    End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If FormBorderStyle = BorderStyle.None Then
+            Htmls.conf.FileName = cfFile
+            Htmls.conf.FullScreen = True
+            Htmls.conf.Save()
+        Else
+            Htmls.conf.FileName = cfFile
+            Htmls.conf.FullScreen = False
+            Htmls.conf.Save()
+        End If
     End Sub
 End Class

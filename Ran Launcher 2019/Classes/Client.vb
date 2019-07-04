@@ -37,6 +37,7 @@ Public Structure Client
             reader.Close()
             Return instance
         Catch ex As Exception
+            Logger.Log(ex.Message, ex.StackTrace)
             Return New Client(FileName)
         End Try
     End Function

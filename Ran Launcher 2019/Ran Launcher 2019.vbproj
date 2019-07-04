@@ -49,6 +49,15 @@
   <PropertyGroup>
     <ApplicationIcon>RanOnlineGS.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
@@ -81,7 +90,7 @@
   <ItemGroup>
     <Compile Include="Classes\Client.vb" />
     <Compile Include="Classes\Config.vb" />
-    <Compile Include="Classes\IniRead.vb" />
+    <Compile Include="Classes\Logger.vb" />
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +145,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -21,6 +21,7 @@ Public Structure Conf
     Public Argument As String
     Public PatchAddress As String
     Public ServerVersion As String
+    Public FullScreen As Boolean
 
     Public Sub New(fn As String)
         FileName = fn
@@ -45,6 +46,7 @@ Public Structure Conf
             reader.Close()
             Return instance
         Catch ex As Exception
+            Logger.Log(ex.Message, ex.StackTrace)
             Return New Conf(FileName)
         End Try
     End Function

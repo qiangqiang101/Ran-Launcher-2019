@@ -1,0 +1,12 @@
+4/7/2019 9:29:28 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 6
+4/7/2019 9:29:35 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 6
+4/7/2019 9:46:00 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 6

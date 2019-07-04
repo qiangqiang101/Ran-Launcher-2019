@@ -23,7 +23,7 @@ Public Class frmUpdate
             pbOverall.Maximum = cfu
         Else
             lblStatus.Text = "暫無更新。"
-            processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
+            processStart2($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
             frmMain.Close()
         End If
     End Sub
@@ -101,7 +101,7 @@ Public Class frmUpdate
                 DownloadUpdate()
             Else
                 lblStatus.Text = "暫無更新"
-                processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
+                processStart2($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
                 frmMain.Close()
             End If
         End If

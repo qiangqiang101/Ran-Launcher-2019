@@ -385,19 +385,19 @@ img {vertical-align: middle;}
 <div class=""mySlides fade"">
   <div class=""numbertext"">1 / 3</div>
   <img src=""" & Application.StartupPath & "\Data\Launcher\images\slide1.jpg"" style=""width:100%"">
-  <div class=""text"">Caption Text</div>
+  <div class=""text""></div>
 </div>
 
 <div class=""mySlides fade"">
   <div class=""numbertext"">2 / 3</div>
   <img src=""" & Application.StartupPath & "\Data\Launcher\images\slide2.jpg"" style=""width:100%"">
-  <div class=""text"">Caption Two</div>
+  <div class=""text""></div>
 </div>
 
 <div class=""mySlides fade"">
   <div class=""numbertext"">3 / 3</div>
   <img src=""" & Application.StartupPath & "\Data\Launcher\images\slide3.jpg"" style=""width:100%"">
-  <div class=""text"">Caption Three</div>
+  <div class=""text""></div>
 </div>
 
 </div>
@@ -436,10 +436,14 @@ function showSlides() {
 
     <Extension>
     Public Sub RunPage(browser As WebBrowser, html As String)
-        browser.Navigate(Application.StartupPath)
-        Dim hdoc As HtmlDocument = browser.Document
-        hdoc.Write(String.Empty)
-        browser.DocumentText = html
+        Try
+            browser.Navigate(Application.StartupPath)
+            Dim hdoc As HtmlDocument = browser.Document
+            hdoc.Write(String.Empty)
+            browser.DocumentText = html
+        Catch ex As Exception
+            Logger.Log(ex.Message, ex.StackTrace)
+        End Try
     End Sub
 
 End Module
