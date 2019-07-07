@@ -3,23 +3,16 @@
 Module Helper
 
     Public Declare Function GetAsyncKeyState Lib "user32" (ByVal vKey As Integer) As Integer
+    Public Declare Function SetParent Lib "user32.dll" (ByVal hWndChild As IntPtr, ByVal hWndNewParent As IntPtr) As Integer
+    Public Declare Function SendMessage Lib "user32.dll" (ByVal hWnd As IntPtr, ByVal Msg As Integer, ByVal wParam As Integer, ByVal lParam As Integer) As Integer
 
-    Public Sub processStart(ByVal filename As String, ByVal arg As String)
+    Public Sub processStart(ByVal filename As String, ByVal arg As String, form As Form)
         Try
             Dim proc As Process
-            proc = Process.Start(filename, arg)
+            Dim psi = New ProcessStartInfo With {.FileName = filename, .Arguments = arg, .WorkingDirectory = Application.StartupPath, .UseShellExecute = True, .CreateNoWindow = False, .WindowStyle = ProcessWindowStyle.Normal}
+            proc = Process.Start(psi)
         Catch ex As Exception
             Logger.Log(ex.Message, ex.StackTrace)
-        End Try
-    End Sub
-
-    Public Sub processStart2(ByVal filename As String, ByVal arg As String)
-        Try
-            Dim psi = New ProcessStartInfo With {.FileName = "CMD", .Arguments = String.Format("/C start """" ""{0}"" ""{1}""", filename, arg), .WorkingDirectory = Application.StartupPath, .UseShellExecute = True, .CreateNoWindow = False, .WindowStyle = ProcessWindowStyle.Normal}
-            Process.Start(psi)
-        Catch ex As Exception
-            Logger.Log(ex.Message, ex.StackTrace)
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "出錯了")
         End Try
     End Sub
 

@@ -14,7 +14,6 @@
 
     Private Sub html_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles html.DocumentCompleted
         doc = CType(sender, WebBrowser).Document
-        Text = html.DocumentTitle
     End Sub
 
     Private Sub doc_Click(sender As Object, e As HtmlElementEventArgs) Handles doc.Click
@@ -65,7 +64,7 @@
             html2.Url = New Uri($"{Htmls.conf.RemoteIntroHtml}")
             Wait(Htmls.conf.IntroWaitDuration * 2)
             If html2.Visible Then
-                html2.Visible = False
+                html2.Hide()
                 If Htmls.conf.UseRemoteHtml Then
                     html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
                 Else
@@ -76,7 +75,7 @@
             html2.RunPage(IntroHtml)
             Wait(Htmls.conf.IntroWaitDuration)
             If html2.Visible Then
-                html2.Visible = False
+                html2.Hide()
                 If Htmls.conf.UseRemoteHtml Then
                     html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
                 Else
@@ -89,7 +88,11 @@
     Private Sub tKey_Tick(sender As Object, e As EventArgs) Handles tKey.Tick
         If (GetAsyncKeyState(Keys.Escape) OrElse GetAsyncKeyState(Keys.Enter) OrElse GetAsyncKeyState(Keys.Space)) AndAlso html2.Visible Then
             html2.Hide()
-            html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
+            If Htmls.conf.UseRemoteHtml Then
+                html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
+            Else
+                html.RunPage(MainHtml)
+            End If
         End If
     End Sub
 

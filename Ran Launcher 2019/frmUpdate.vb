@@ -10,6 +10,10 @@ Public Class frmUpdate
     Private cl As Client
     Private clFile As String = $"{Application.StartupPath}\Cver.xml"
 
+    Private IsFormBeingDragged As Boolean = False
+    Private MouseDownX As Integer
+    Private MouseDownY As Integer
+
     Private Sub frmUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckForIllegalCrossThreadCalls = False
 
@@ -23,7 +27,7 @@ Public Class frmUpdate
             pbOverall.Maximum = cfu
         Else
             lblStatus.Text = "暫無更新。"
-            processStart2($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
+            processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
             frmMain.Close()
         End If
     End Sub
@@ -77,7 +81,7 @@ Public Class frmUpdate
                 Next
             End Using
         Catch ex As Exception
-            MsgBox($"{ex.Message}{ex.StackTrace}", MsgBoxStyle.Critical, "Error")
+            Logger.Log(ex.Message, ex.StackTrace)
         End Try
     End Sub
 
@@ -101,7 +105,7 @@ Public Class frmUpdate
                 DownloadUpdate()
             Else
                 lblStatus.Text = "暫無更新"
-                processStart2($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument)
+                processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
                 frmMain.Close()
             End If
         End If
@@ -109,6 +113,37 @@ Public Class frmUpdate
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
         Close()
+    End Sub
+
+    Protected Overrides Sub OnMouseDown(e As MouseEventArgs)
+        MyBase.OnMouseDown(e)
+
+        If e.Button = MouseButtons.Left Then
+            IsFormBeingDragged = True
+            MouseDownX = e.X
+            MouseDownY = e.Y
+        End If
+    End Sub
+
+    Protected Overrides Sub OnMouseUp(e As MouseEventArgs)
+        MyBase.OnMouseUp(e)
+
+        If e.Button = MouseButtons.Left Then
+            IsFormBeingDragged = False
+        End If
+    End Sub
+
+    Protected Overrides Sub OnMouseMove(e As MouseEventArgs)
+        MyBase.OnMouseMove(e)
+
+        If IsFormBeingDragged Then
+            Dim temp As Point = New Point()
+
+            temp.X = Me.Location.X + (e.X - MouseDownX)
+            temp.Y = Me.Location.Y + (e.Y - MouseDownY)
+            Me.Location = temp
+            temp = Nothing
+        End If
     End Sub
 
 End Class

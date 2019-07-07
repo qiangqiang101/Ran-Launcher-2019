@@ -16,3 +16,11 @@
 7/5/2019 5:12:02 AM:There is an error in XML document (14, 73).   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
    at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
    at Ran_Launcher_2019.Conf.ReadFromFile() in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Config.vb:line 47
+7/7/2019 2:26:15 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
+7/7/2019 2:41:16 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13

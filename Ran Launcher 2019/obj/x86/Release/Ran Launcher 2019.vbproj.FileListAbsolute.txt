@@ -1,0 +1,28 @@
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Launcher.exe.config
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\libEGL.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\libGLESv2.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Launcher.exe
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Launcher.pdb
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Launcher.xml
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Ionic.Zip.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Ran Launcher 2019.vbprojResolveAssemblyReference.cache
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Ran_Launcher_2019.frmMain.resources
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Ran_Launcher_2019.frmUpdate.resources
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Ran_Launcher_2019.Resources.resources
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Ran Launcher 2019.vbproj.GenerateResource.Cache
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Launcher.exe
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Launcher.xml
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\x86\Release\Launcher.pdb
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Awesomium.Core.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Awesomium.Windows.Forms.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Awesomium.Core.xml
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\Awesomium.Windows.Forms.xml
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\awesomium.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\icudt.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\avcodec-53.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\avformat-53.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\avutil-51.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\awesomium_process
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\inspector.pak
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\xinput9_1_0.dll
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\x86\Release\pdf_js.pak
