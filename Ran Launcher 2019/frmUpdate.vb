@@ -39,10 +39,14 @@ Public Class frmUpdate
     End Sub
 
     Private Function CheckForUpdate() As Integer
-        Dim client As WebClient = New WebClient()
-
-        Dim reader As StreamReader = New StreamReader(client.OpenRead(Htmls.conf.ServerVersion))
-        Return CInt(reader.ReadToEnd)
+        Try
+            Application.DoEvents()
+            Dim client As WebClient = New WebClient()
+            Dim reader As StreamReader = New StreamReader(client.OpenRead(Htmls.conf.ServerVersion))
+            Return CInt(reader.ReadToEnd)
+        Catch ex As Exception
+            Return 0
+        End Try
     End Function
 
 #Region "WebClient"

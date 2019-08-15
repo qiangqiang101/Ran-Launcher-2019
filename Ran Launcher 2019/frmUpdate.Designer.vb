@@ -135,6 +135,7 @@ Partial Class frmUpdate
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmUpdate"
+        Me.Opacity = 0.8R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUpdate"
         Me.ResumeLayout(False)
