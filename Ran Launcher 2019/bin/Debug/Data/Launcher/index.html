@@ -1,0 +1,295 @@
+
+<head>
+<title>勇Online</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8" />
+<style>
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.content-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+}
+
+.content-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0px;
+}
+
+.content-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: -4px;
+}
+
+.content-select {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 349px;
+  padding: 0px;
+}
+
+.exit-msgbox {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 335px;
+  height: 100px;
+  padding: 0px
+}
+
+.help-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 416px;
+  padding: 0px
+}
+
+.news-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 416px;
+  padding: 0px
+}
+
+.website-window {
+  position: fixed;
+  top: 49%;
+  left: 50%;
+  transform: translate(-51%, -50%);
+  width: 1160px;
+  height: 564px;
+  padding: 0px
+}
+
+.register-window {
+  position: fixed;
+  top: 49%;
+  left: 50%;
+  transform: translate(-51%, -50%);
+  width: 1160px;
+  height: 564px;
+  padding: 0px
+}
+
+.content-select-buttons {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 102px;
+  height: 20px;
+  padding: 0px;
+}
+
+.content-bottom-copyright {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0px;
+  color: #f1f1f1;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+img {text-decoration: none; border: 0px}
+
+.disable-selection {
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer */
+   -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+</style>
+</head>
+
+<body>
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="videos\bg.mp4" type="video/mp4">
+</video>
+
+<audio autoplay loop id="bgm">
+	<source src="bgm\intro.mp3" type="audio/mp3">
+</audio>
+
+<div class="content-select disable-selection">
+  <img draggable="false" src="images\select_server.png" style="width:200px;height:349px;opacity:0.9;filter:alpha(opacity=90);">
+  <p style="position:absolute;left:5px;top:99px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">勇Online</p>
+</div>
+
+<div class="content-select-buttons">
+  <a href="#play"><img draggable="false" id="play" src="images\play.png" style="padding-bottom: 5px" onmousedown="mousedown('play');" onmouseup="resetimage('play');" onmouseleave="resetimage('play');"></a>
+  <a href="#register"><img draggable="false" id="register" src="images\register.png" style="padding-bottom: 5px" onmousedown="mousedown('register');" onmouseup="resetimage('register');" onmouseleave="resetimage('register');"></a>
+  <a href="#website"><img draggable="false" id="website" src="images\website.png" style="padding-bottom: 5px" onmousedown="mousedown('website');" onmouseup="resetimage('website');" onmouseleave="resetimage('website');"></a>
+  <a href="#news"><img draggable="false" id="news" src="images\news.png" style="padding-bottom: 5px" onmousedown="mousedown('news');" onmouseup="resetimage('news');" onmouseleave="resetimage('news');"></a>
+  <a href="#help"><img draggable="false" id="help" src="images\help.png" style="padding-bottom: 5px" onmousedown="mousedown('help');" onmouseup="resetimage('help');" onmouseleave="resetimage('help');"></a> 
+  <a href="#exit"><img draggable="false" id="exit" src="images\exit.png" onmousedown="mousedown('exit');" onmouseup="resetimage('exit');" onmouseleave="resetimage('exit');" hspace="70" vspace="5"></a>
+</div>
+
+<div style="display: none" id="exit-msgbox" class="exit-msgbox">
+  <img draggable="false" src="images\msgbox_bg.png" style="width:335px;height:100px;opacity:0.8;filter:alpha(opacity=80);">
+  <img draggable="false" src="images\msgbox.png" style="width:327px;height:66px;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:4px;top:4px;">
+  <p style="position:absolute;left:10px;top:0px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">是否要離開遊戲？</p>
+  <a href="#exitok"><img draggable="false" id="exitok" src="images\exitok.png" style="position:absolute;left:120px;top:75px;" onmousedown="mousedown('exitok');" onmouseup="resetimage('exitok');" onmouseleave="resetimage('exitok');"></a>
+  <a href="#exitcancel"><img draggable="false" id="exitcancel" src="images\exitcancel.png" style="position:absolute;left:228px;top:75px;" hspace="0" onmousedown="mousedown('exitcancel');" onmouseup="resetimage('exitcancel');" onmouseleave="resetimage('exitcancel');"></a>
+</div>
+
+<div style="display: none" id="help-window" class="help-window">
+  <img draggable="false" src="images\help_window.png" style="width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);"> 
+  <iframe src="..\Help\help.htm" height="400" width="700" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">幫助</p>
+  <a href="#" id="closehelp" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="showhelp();">&times;</a>
+</div>
+
+<div style="display: none" id="news-window" class="news-window">
+  <img draggable="false" src="images\help_window.png" style="width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);"> 
+  <iframe src="http://www.yong-online.com.tw/boards.aspx" height="400" width="700" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">新聞</p>
+  <a href="#" id="closenews" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="shownews();">&times;</a>
+</div>
+
+<div style="display: none" id="website-window" class="website-window">
+  <img draggable="false" src="images\website_window.png" style="width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);"> 
+  <iframe src="http://www.yong-online.com.tw" height="564" width="1160" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">網站</p>
+  <a href="#" id="closewebsite" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="showwebsite();">&times;</a>
+</div>
+
+<div style="display: none" id="register-window" class="register-window">
+  <img draggable="false" src="images\website_window.png" style="width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);"> 
+  <iframe src="https://www.9buddy.com/join_step01.aspx" height="564" width="1160" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">註冊</p>
+  <a href="#" id="closeregister" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="showregister();">&times;</a>
+</div>
+
+<div class="content-top">
+  <img draggable="false" src="images\border_top.png" style="width:100%;height:75px;opacity:0.8;filter:alpha(opacity=80);">
+</div>
+
+<div class="content-window">
+  <a href="#window"><img draggable="false" id="window" src="images\window.png" style="width:20px;height:20px;right:0;"></a>
+</div>
+
+<div class="content-bottom">
+  <img draggable="false" src="images\border_bottom.png" style="width:100%;height:75px;opacity:0.8;filter:alpha(opacity=80);">
+</div>
+
+<div class="content-bottom-copyright disable-selection">
+  <p>勇Online<br>Copyright &copy; 2019 勇Online. All Rights Reserved.</p>
+</div>
+</body>
+
+<script>
+function mousedown(id) {
+	var el = document.getElementById(id);
+	if (!el) {
+		throw new ReferenceError(id + "is not defined");
+	}
+	el.setAttribute("src", "images\\" + id + "_pressed.png")
+	if (id === "exit") {
+	showmsgboxexit();
+	}
+	if (id === "exitcancel") {
+	showmsgboxexit();
+	}
+	if (id === "help") {
+	showhelp();
+	}
+	if (id === "news") {
+	shownews();
+	}
+	if (id === "website") {
+	showwebsite();
+	}
+	if (id === "register") {
+	showregister();
+	}
+}
+
+function resetimage(id) {
+	var el = document.getElementById(id);
+	if (!el) {
+		throw new ReferenceError(id + "is not defined");
+	}
+	el.setAttribute("src", "images\\" + id + ".png")
+}
+
+function showmsgboxexit() {
+	var x = document.getElementById("exit-msgbox")
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+function showhelp() {
+	var x = document.getElementById("help-window")
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+function shownews() {
+	var x = document.getElementById("news-window")
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+function showwebsite() {
+	var x = document.getElementById("website-window")
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+function showregister() {
+	var x = document.getElementById("register-window")
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+</script>

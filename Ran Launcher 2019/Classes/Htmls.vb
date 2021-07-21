@@ -3,10 +3,12 @@
 Module Htmls
 
     Public cfFile As String = $"{Application.StartupPath}\data\launcher\config.xml"
+    Public lgFile As String = $"{Application.StartupPath}\data\launcher\language.xml"
     Public conf As Conf = New Conf(cfFile).Instance
+    Public lang As Lang = New Lang(lgFile).Instance
 
     Public MainHtml As String = "<head>
-<title>" & conf.ServerName & "</title>
+<title>" & lang.ServerName & "</title>
 <meta http-equiv=""X-UA-Compatible"" content=""IE=9"" charset=""utf-8"" />
 <style>
 /* Style the video: 100% width and height to cover the entire window */
@@ -144,8 +146,8 @@ img {text-decoration: none; border: 0px}
 
 <body>
 <!-- The video -->
-<video autoplay muted loop id=""myVideo"">
-  <source src=""" & Application.StartupPath & "\data\launcher\videos\bg.mp4"" type=""video/mp4"">
+<video id=""myVideo"" onended=""repeatvideo()"" autoplay muted>
+    <source src=""" & Application.StartupPath & "\data\launcher\videos\bg.mp4"" type=""video/mp4"">
 </video>
 
 <audio autoplay loop id=""bgm"">
@@ -154,7 +156,7 @@ img {text-decoration: none; border: 0px}
 
 <div class=""content-select disable-selection"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\select_server.png"" style=""width:200px;height:349px;opacity:0.9;filter:alpha(opacity=90);"">
-  <p style=""position:absolute;left:5px;top:99px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & conf.ServerName & "</p>
+  <p style=""position:absolute;left:5px;top:99px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.ServerName & "</p>
 </div>
 
 <div class=""content-select-buttons"">
@@ -169,7 +171,7 @@ img {text-decoration: none; border: 0px}
 <div style=""display: none"" id=""exit-msgbox"" class=""exit-msgbox"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\msgbox_bg.png"" style=""width:335px;height:100px;opacity:0.8;filter:alpha(opacity=80);"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\msgbox.png"" style=""width:327px;height:66px;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:4px;top:4px;"">
-  <p style=""position:absolute;left:10px;top:0px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">是否要離開遊戲？</p>
+  <p style=""position:absolute;left:10px;top:0px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.ExitMsg & "</p>
   <a href=""#exitok""><img draggable=""false"" id=""exitok"" src=""" & Application.StartupPath & "\data\launcher\images\exitok.png"" style=""position:absolute;left:120px;top:75px;"" onmousedown=""mousedown('exitok');"" onmouseup=""resetimage('exitok');"" onmouseleave=""resetimage('exitok');""></a>
   <a href=""#exitcancel""><img draggable=""false"" id=""exitcancel"" src=""" & Application.StartupPath & "\data\launcher\images\exitcancel.png"" style=""position:absolute;left:228px;top:75px;"" hspace=""0"" onmousedown=""mousedown('exitcancel');"" onmouseup=""resetimage('exitcancel');"" onmouseleave=""resetimage('exitcancel');""></a>
 </div>
@@ -177,28 +179,28 @@ img {text-decoration: none; border: 0px}
 <div style=""display: none"" id=""help-window"" class=""help-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\help_window.png"" style=""width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);""> 
   <iframe src=""" & Application.StartupPath & "\data\launcher\..\Help\help.htm"" height=""400"" width=""700"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
-  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">幫助</p>
+  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.HelpTitle & "</p>
   <a href=""#"" id=""closehelp"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""showhelp();"">&times;</a>
 </div>
 
 <div style=""display: none"" id=""news-window"" class=""news-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\help_window.png"" style=""width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);""> 
   <iframe src=" & conf.NewsLink & " height=""400"" width=""700"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
-  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">新聞</p>
+  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.NewsTitle & "</p>
   <a href=""#"" id=""closenews"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""shownews();"">&times;</a>
 </div>
 
 <div style=""display: none"" id=""website-window"" class=""website-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\website_window.png"" style=""width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);""> 
   <iframe src=" & conf.WebsiteLink & " height=""564"" width=""1160"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
-  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">網站</p>
+  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.WebsiteTitle & "</p>
   <a href=""#"" id=""closewebsite"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""showwebsite();"">&times;</a>
 </div>
 
 <div style=""display: none"" id=""register-window"" class=""register-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\website_window.png"" style=""width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);""> 
   <iframe src=" & conf.RegisterLink & " height=""564"" width=""1160"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
-  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">網站</p>
+  <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.RegisterTitle & "</p>
   <a href=""#"" id=""closeregister"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""showregister();"">&times;</a>
 </div>
 
@@ -215,7 +217,7 @@ img {text-decoration: none; border: 0px}
 </div>
 
 <div class=""content-bottom-copyright disable-selection"">
-  <p>" & conf.Copyright.Replace("\n", "<br>").Replace("(c)", "&copy;") & "</p>
+  <p>" & lang.Copyright.Replace("\n", "<br>").Replace("(c)", "&copy;") & "</p>
 </div>
 </body>
 
@@ -297,6 +299,12 @@ function showregister() {
 	} else {
 		x.style.display = ""none"";
 	}
+}
+
+function repeatvideo() {
+	var vidElem = document.getElementById('myVideo');
+	vidElem.currentTime = 15;
+	vidElem.play();
 }
 </script>"
 
@@ -435,7 +443,7 @@ function showSlides() {
 </html>"
 
     Public IntroHtml As String = "<head>
-<title>" & conf.ServerName & "</title>
+<title>" & lang.ServerName & "</title>
 <meta http-equiv=""X-UA-Compatible"" content=""IE=9"" charset=""utf-8"" />
 <style>
 /* Style the video: 100% width and height to cover the entire window */

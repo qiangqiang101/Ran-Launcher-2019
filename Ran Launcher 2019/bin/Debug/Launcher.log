@@ -1,0 +1,3 @@
+7/22/2021 4:32:39 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73

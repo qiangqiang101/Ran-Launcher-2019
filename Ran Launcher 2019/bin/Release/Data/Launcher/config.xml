@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ServerName>勇Online</ServerName>
-  <Copyright>勇Online\nCopyright (c) 2019. All Rights Reserved.</Copyright>
   <NewsLink>http://www.yong-online.com.tw/boards.aspx</NewsLink>
   <WebsiteLink>http://www.yong-online.com.tw</WebsiteLink>
   <RegisterLink>https://www.9buddy.com/join_step01.aspx</RegisterLink>
@@ -9,10 +7,9 @@
   <Argument>app_run</Argument>
   <PatchAddress>https://github.com/qiangqiang101/LaunchMenuUpdate/raw/master/download/</PatchAddress>
   <ServerVersion>https://github.com/qiangqiang101/LaunchMenuUpdate/raw/master/ver.txt</ServerVersion>
-  <UseRemoteHtml>false</UseRemoteHtml>
-  <RemoteHtml>https://www.imnotmental.com/ran/</RemoteHtml>
-  <UseRemoteIntroHtml>false</UseRemoteIntroHtml>
-  <RemoteIntroHtml>https://www.imnotmental.com/ran/intro.html</RemoteIntroHtml>
   <IntroWaitDuration>3500</IntroWaitDuration>
   <FullScreen>false</FullScreen>
+  <DisplayMethod>BuildIn</DisplayMethod>
+  <HtmlPath>index.html</HtmlPath>
+  <IntroHtmlPath>intro.html</IntroHtmlPath>
 </Conf>

@@ -26,7 +26,7 @@ Public Class frmUpdate
             DownloadUpdate()
             pbOverall.Maximum = cfu
         Else
-            lblStatus.Text = "暫無更新。"
+            lblStatus.Text = Htmls.lang.NoNewUpdate
             processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
             frmMain.Close()
         End If
@@ -53,11 +53,11 @@ Public Class frmUpdate
 
     Private Sub wc_DownloadFileCompleted(sender As Object, e As AsyncCompletedEventArgs) Handles wc.DownloadFileCompleted
         If e.Cancelled Then
-            lblStatus.Text = "更新被終止。"
+            lblStatus.Text = Htmls.lang.UpdateCancel
         ElseIf Not e.Error Is Nothing Then
-            lblStatus.Text = "出現錯誤。"
+            lblStatus.Text = Htmls.lang.UpdateError
         Else
-            lblStatus.Text = "下載完成，正在為您解壓資源包（過程不消耗流量）"
+            lblStatus.Text = Htmls.lang.DownloadComplete
             pbCurrent.Value = pbCurrent.Minimum
             bgworker.RunWorkerAsync()
         End If
@@ -65,7 +65,7 @@ Public Class frmUpdate
 
     Private Sub wc_DownloadProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs) Handles wc.DownloadProgressChanged
         pbCurrent.Value = e.ProgressPercentage
-        lblStatus.Text = $"剩餘總下載量：{Math.Round(e.TotalBytesToReceive / 1024 - e.BytesReceived / 1024)} KB ({pbCurrent.Value}%)"
+        lblStatus.Text = $"{Htmls.lang.DownloadRemaining}{Math.Round(e.TotalBytesToReceive / 1024 - e.BytesReceived / 1024)} KB ({pbCurrent.Value}%)"
     End Sub
 
 #End Region
@@ -79,7 +79,7 @@ Public Class frmUpdate
                 pbCurrent.Maximum = zip.Entries.Count
                 For Each entry As ZipEntry In zip
                     entry.Extract(extractDir, ExtractExistingFileAction.OverwriteSilently)
-                    lblStatus.Text = $"正在為您解壓資源包（過程不消耗流量）（{pbCurrent.Value}/{pbCurrent.Maximum}）"
+                    lblStatus.Text = $"{Htmls.lang.Unpacking} ({pbCurrent.Value}/{pbCurrent.Maximum})"
                     pbCurrent.Value += 1
                     Thread.Sleep(50)
                 Next
@@ -91,11 +91,11 @@ Public Class frmUpdate
 
     Private Sub BgWorker_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bgworker.RunWorkerCompleted
         If e.Cancelled Then
-            lblStatus.Text = "更新被終止。"
+            lblStatus.Text = Htmls.lang.UpdateCancel
         ElseIf Not e.Error Is Nothing Then
-            lblStatus.Text = "出現錯誤。"
+            lblStatus.Text = Htmls.lang.UpdateError
         Else
-            lblStatus.Text = "解壓完畢。"
+            lblStatus.Text = Htmls.lang.UnpackComplete
             pbCurrent.Value = pbCurrent.Minimum
             pbCurrent.Maximum = 100
             pbOverall.Value += 1
@@ -105,10 +105,10 @@ Public Class frmUpdate
             If File.Exists($"{Application.StartupPath}\patch.zip") Then File.Delete($"{Application.StartupPath}\patch.zip")
 
             If cl.CurrentVersion < CheckForUpdate() Then
-                lblStatus.Text = "正在查詢更新..."
+                lblStatus.Text = Htmls.lang.CheckingForUpdate
                 DownloadUpdate()
             Else
-                lblStatus.Text = "暫無更新"
+                lblStatus.Text = Htmls.lang.NoNewUpdate
                 processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
                 frmMain.Close()
             End If

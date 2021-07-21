@@ -4,7 +4,7 @@
     Private upd As New frmUpdate
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Text = Htmls.conf.ServerName
+        Text = Htmls.lang.ServerName
 
         If Htmls.conf.FullScreen Then
             FormBorderStyle = FormBorderStyle.None
@@ -60,39 +60,75 @@
     End Sub
 
     Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        If Htmls.conf.UseRemoteIntroHtml Then
-            html2.Url = New Uri($"{Htmls.conf.RemoteIntroHtml}")
-            Wait(Htmls.conf.IntroWaitDuration * 2)
-            If html2.Visible Then
-                html2.Hide()
-                If Htmls.conf.UseRemoteHtml Then
-                    html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
-                Else
+        Select Case Htmls.conf.DisplayMethod
+            Case DisplayMethod.BuildIn
+                html2.RunPage(IntroHtml)
+                Wait(Htmls.conf.IntroWaitDuration)
+                If html2.Visible Then
+                    html2.Hide()
                     html.RunPage(MainHtml)
                 End If
-            End If
-        Else
-            html2.RunPage(IntroHtml)
-            Wait(Htmls.conf.IntroWaitDuration)
-            If html2.Visible Then
-                html2.Hide()
-                If Htmls.conf.UseRemoteHtml Then
-                    html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
-                Else
-                    html.RunPage(MainHtml)
-                End If
-            End If
-        End If
+            Case DisplayMethod.Local
+                Try
+                    html2.Url = New Uri($".\data\launcher\{Htmls.conf.IntroHtmlPath}")
+                    Wait(Htmls.conf.IntroWaitDuration * 2)
+                    If html2.Visible Then
+                        html2.Hide()
+                        html.Url = New Uri($".\data\launcher\{Htmls.conf.HtmlPath}")
+                    End If
+                Catch ex As Exception
+                    Logger.Log(ex.Message, ex.StackTrace)
+                    ErrorFix(1)
+                End Try
+            Case DisplayMethod.Remote
+                Try
+                    html2.Url = New Uri($"{Htmls.conf.IntroHtmlPath}")
+                    Wait(Htmls.conf.IntroWaitDuration * 2)
+                    If html2.Visible Then
+                        html2.Hide()
+                        html.Url = New Uri($"{Htmls.conf.HtmlPath}")
+                    End If
+                Catch ex As Exception
+                    Logger.Log(ex.Message, ex.StackTrace)
+                    ErrorFix(1)
+                End Try
+        End Select
     End Sub
 
     Private Sub tKey_Tick(sender As Object, e As EventArgs) Handles tKey.Tick
         If (GetAsyncKeyState(Keys.Escape) OrElse GetAsyncKeyState(Keys.Enter) OrElse GetAsyncKeyState(Keys.Space)) AndAlso html2.Visible Then
             html2.Hide()
-            If Htmls.conf.UseRemoteHtml Then
-                html.Url = New Uri($"{Htmls.conf.RemoteHtml}")
-            Else
+            Select Case Htmls.conf.DisplayMethod
+                Case DisplayMethod.BuildIn
+                    html.RunPage(MainHtml)
+                Case DisplayMethod.Local
+                    Try
+                        html.Url = New Uri($".\data\launcher\{Htmls.conf.HtmlPath}")
+                    Catch ex As Exception
+                        Logger.Log(ex.Message, ex.StackTrace)
+                        ErrorFix(2)
+                    End Try
+                Case DisplayMethod.Remote
+                    Try
+                        html.Url = New Uri($"{Htmls.conf.HtmlPath}")
+                    Catch ex As Exception
+                        Logger.Log(ex.Message, ex.StackTrace)
+                        ErrorFix(2)
+                    End Try
+            End Select
+        End If
+    End Sub
+
+    Private Sub ErrorFix(data As Integer)
+        If data = 1 Then
+            html2.RunPage(IntroHtml)
+            Wait(Htmls.conf.IntroWaitDuration)
+            If html2.Visible Then
+                html2.Hide()
                 html.RunPage(MainHtml)
             End If
+        Else
+            html.RunPage(MainHtml)
         End If
     End Sub
 

@@ -21,3 +21,16 @@ D:\Projects\Mods\Ran Launcher 2019\Ran Launcher 2019\obj\Debug\Ran_Launcher_2019
 D:\Projects\Mods\Ran Launcher 2019\Ran Launcher 2019\obj\Debug\Ran_Launcher_2019.Resources.resources
 D:\Projects\Mods\Ran Launcher 2019\Ran Launcher 2019\obj\Debug\Ran Launcher 2019.vbproj.GenerateResource.Cache
 D:\Projects\Mods\Ran Launcher 2019\Ran Launcher 2019\obj\Debug\Ran_Launcher_2019.frmHelp.resources
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Debug\Launcher.exe.config
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Debug\Launcher.exe
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Debug\Launcher.pdb
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Debug\Launcher.xml
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Debug\Ionic.Zip.dll
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Ran Launcher 2019.vbprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Ran_Launcher_2019.frmMain.resources
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Ran_Launcher_2019.frmUpdate.resources
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Ran_Launcher_2019.Resources.resources
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Ran Launcher 2019.vbproj.GenerateResource.Cache
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Launcher.exe
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Launcher.xml
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Debug\Launcher.pdb
