@@ -5,6 +5,8 @@ Imports System.Net
 Imports System.Threading
 Imports Ionic.Zip
 
+'note https://stackoverflow.com/questions/8236150/reading-an-online-xml-file-with-vb-net
+
 Public Class frmUpdate
 
     Private WithEvents wc As New WebClient()
@@ -48,6 +50,7 @@ Public Class frmUpdate
             Dim reader As StreamReader = New StreamReader(client.OpenRead(Htmls.conf.ServerVersion))
             Return CInt(reader.ReadToEnd)
         Catch ex As Exception
+            Logger.Log(ex.Message, ex.StackTrace)
             Return 0
         End Try
     End Function

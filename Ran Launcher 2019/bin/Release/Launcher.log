@@ -181,3 +181,19 @@
    at System.Windows.Forms.Control.set_Text(String value)
    at System.Windows.Forms.Label.set_Text(String value)
    at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 84
+7/23/2021 7:21:31 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
+7/23/2021 7:24:57 AM:Could not connect to Serverhttp://inmtest.linkpc.net/update/ver.txt
+7/23/2021 7:24:57 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
+7/23/2021 7:25:56 AM:Unable to connect to the remote server   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 48
+7/23/2021 7:25:56 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14

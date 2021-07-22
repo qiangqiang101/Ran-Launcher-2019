@@ -119,6 +119,7 @@
     <Compile Include="Classes\Config.vb" />
     <Compile Include="Classes\Language.vb" />
     <Compile Include="Classes\Logger.vb" />
+    <Compile Include="Classes\PatchList.vb" />
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
