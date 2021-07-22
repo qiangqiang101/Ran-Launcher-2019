@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
+Imports System.IO.Compression
 Imports System.Net
 Imports System.Threading
 Imports Ionic.Zip
@@ -79,13 +80,25 @@ Public Class frmUpdate
         Dim extractDir As String = Application.StartupPath
 
         Try
-            Using zip As ZipFile = ZipFile.Read(zipToUnpack)
-                pbCurrent.Maximum = zip.Entries.Count
-                For Each entry As ZipEntry In zip
-                    entry.Extract(extractDir, ExtractExistingFileAction.OverwriteSilently)
+            'Using zip As ZipFile = ZipFile.Read(zipToUnpack)
+            '    pbCurrent.Maximum = zip.Entries.Count
+            '    For Each entry As ZipEntry In zip
+            '        entry.Extract(extractDir, ExtractExistingFileAction.OverwriteSilently)
+            '        lblStatus.Text = $"{Htmls.lang.Unpacking} {pbCurrent.Value}/{pbCurrent.Maximum} ({GetPercentage(pbCurrent.Value, pbCurrent.Maximum)})"
+            '        pbCurrent.Value += 1
+            '        Thread.Sleep(1)
+            '    Next
+            'End Using
+
+            If Not extractDir.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal) Then extractDir &= Path.DirectorySeparatorChar
+            Using zip As ZipArchive = Compression.ZipFile.OpenRead(zipToUnpack)
+                For Each entry In zip.Entries
+                    Dim destinationPath = Path.GetFullPath(Path.Combine(extractDir, entry.FullName))
+                    If destinationPath.StartsWith(extractDir, StringComparison.Ordinal) Then entry.ExtractToFile(destinationPath, True)
+
                     lblStatus.Text = $"{Htmls.lang.Unpacking} {pbCurrent.Value}/{pbCurrent.Maximum} ({GetPercentage(pbCurrent.Value, pbCurrent.Maximum)})"
                     pbCurrent.Value += 1
-                    Thread.Sleep(50)
+                    Thread.Sleep(1)
                 Next
             End Using
         Catch ex As Exception
