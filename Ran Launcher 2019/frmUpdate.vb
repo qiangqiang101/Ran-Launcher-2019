@@ -80,6 +80,7 @@ Public Class frmUpdate
         Dim extractDir As String = Application.StartupPath
 
         Try
+            'Using DotNetZip
             'Using zip As ZipFile = ZipFile.Read(zipToUnpack)
             '    pbCurrent.Maximum = zip.Entries.Count
             '    For Each entry As ZipEntry In zip
@@ -90,6 +91,7 @@ Public Class frmUpdate
             '    Next
             'End Using
 
+            'Using DotNet4 Compression Zip
             If Not extractDir.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal) Then extractDir &= Path.DirectorySeparatorChar
             Using zip As ZipArchive = Compression.ZipFile.OpenRead(zipToUnpack)
                 For Each entry In zip.Entries
