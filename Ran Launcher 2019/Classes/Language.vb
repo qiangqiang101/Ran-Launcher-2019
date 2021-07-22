@@ -27,6 +27,7 @@ Public Structure Lang
     Public Unpacking As String
     Public UnpackComplete As String
     Public CheckingForUpdate As String
+    Public UpdateTitle As String
 
     Public Sub New(fn As String)
         FileName = fn
@@ -42,7 +43,8 @@ Public Structure Lang
     Public Function ReadFromFile() As Lang
         If Not File.Exists(FileName) Then
             Return New Lang(FileName) With {.ServerName = "ServerName", .Copyright = "Copyright", .ExitMsg = "ExitMsg", .NewsTitle = "NewsTitle", .HelpTitle = "HelpTitle", .WebsiteTitle = "WebsiteTitle", .RegisterTitle = "RegisterTitle", .NoNewUpdate = "NoNewUpdate",
-                .UpdateCancel = "UpdateCancel", .UpdateError = "UpdateError", .DownloadComplete = "DownloadComplete", .DownloadRemaining = "DownloadRemaining", .Unpacking = "Unpacking", .UnpackComplete = "UnpackComplete", .CheckingForUpdate = "CheckingForUpdate"}
+                .UpdateCancel = "UpdateCancel", .UpdateError = "UpdateError", .DownloadComplete = "DownloadComplete", .DownloadRemaining = "DownloadRemaining", .Unpacking = "Unpacking", .UnpackComplete = "UnpackComplete", .CheckingForUpdate = "CheckingForUpdate",
+                .UpdateTitle = "UpdateTitle"}
         End If
 
         Try
@@ -54,7 +56,8 @@ Public Structure Lang
         Catch ex As Exception
             Logger.Log(ex.Message, ex.StackTrace)
             Return New Lang(FileName) With {.ServerName = "ServerName", .Copyright = "Copyright", .ExitMsg = "ExitMsg", .NewsTitle = "NewsTitle", .HelpTitle = "HelpTitle", .WebsiteTitle = "WebsiteTitle", .RegisterTitle = "RegisterTitle", .NoNewUpdate = "NoNewUpdate",
-                .UpdateCancel = "UpdateCancel", .UpdateError = "UpdateError", .DownloadComplete = "DownloadComplete", .DownloadRemaining = "DownloadRemaining", .Unpacking = "Unpacking", .UnpackComplete = "UnpackComplete", .CheckingForUpdate = "CheckingForUpdate"}
+                .UpdateCancel = "UpdateCancel", .UpdateError = "UpdateError", .DownloadComplete = "DownloadComplete", .DownloadRemaining = "DownloadRemaining", .Unpacking = "Unpacking", .UnpackComplete = "UnpackComplete", .CheckingForUpdate = "CheckingForUpdate",
+                .UpdateTitle = "UpdateTitle"}
         End Try
     End Function
 

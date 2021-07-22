@@ -18,13 +18,15 @@ Public Class frmUpdate
         CheckForIllegalCrossThreadCalls = False
 
         html.RunPage(UpdHtml)
+        Label1.Text = Htmls.lang.UpdateTitle
+        lblStatus.Text = Htmls.lang.CheckingForUpdate
 
         cl = New Client(clFile).Instance
         Dim cfu As Integer = CheckForUpdate()
 
         If cl.CurrentVersion < cfu Then
             DownloadUpdate()
-            pbOverall.Maximum = cfu
+            pbOverall.Maximum = cfu * 2
         Else
             lblStatus.Text = Htmls.lang.NoNewUpdate
             processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
@@ -35,7 +37,7 @@ Public Class frmUpdate
     Private Sub DownloadUpdate()
         Dim patchAddress As String = $"{Htmls.conf.PatchAddress}patch{cl.CurrentVersion + 1}.zip"
         Dim patchFile As String = $"{Application.StartupPath}\patch.zip"
-        wc.DownloadFileAsync(New Uri(patchAddress), patchFile)
+        wc.DownloadFileAsync(New Uri(patchAddress), patchFile, Stopwatch.StartNew)
     End Sub
 
     Private Function CheckForUpdate() As Integer
@@ -59,13 +61,15 @@ Public Class frmUpdate
         Else
             lblStatus.Text = Htmls.lang.DownloadComplete
             pbCurrent.Value = pbCurrent.Minimum
+            pbOverall.Value += 1
             bgworker.RunWorkerAsync()
         End If
     End Sub
 
     Private Sub wc_DownloadProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs) Handles wc.DownloadProgressChanged
         pbCurrent.Value = e.ProgressPercentage
-        lblStatus.Text = $"{Htmls.lang.DownloadRemaining}{Math.Round(e.TotalBytesToReceive / 1024 - e.BytesReceived / 1024)} KB ({pbCurrent.Value}%)"
+        Dim ds = (e.BytesReceived / (DirectCast(e.UserState, Stopwatch).ElapsedMilliseconds / 1000.0#))
+        lblStatus.Text = $"{Htmls.lang.DownloadRemaining}{GetFileSize(Math.Round(e.TotalBytesToReceive - e.BytesReceived))} - {GetDownloadSpeed(ds)} ({pbCurrent.Value}%)"
     End Sub
 
 #End Region
@@ -79,7 +83,7 @@ Public Class frmUpdate
                 pbCurrent.Maximum = zip.Entries.Count
                 For Each entry As ZipEntry In zip
                     entry.Extract(extractDir, ExtractExistingFileAction.OverwriteSilently)
-                    lblStatus.Text = $"{Htmls.lang.Unpacking} ({pbCurrent.Value}/{pbCurrent.Maximum})"
+                    lblStatus.Text = $"{Htmls.lang.Unpacking} {pbCurrent.Value}/{pbCurrent.Maximum} ({GetPercentage(pbCurrent.Value, pbCurrent.Maximum)})"
                     pbCurrent.Value += 1
                     Thread.Sleep(50)
                 Next

@@ -3,6 +3,9 @@
 <title>勇Online</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8" />
 <style>
+body {cursor:url('images\\normal.png'), url('images\\normal.cur'), auto;}
+a {cursor:url('images\\attack.png'), url('images\\attack.cur'), default;}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
 	position: fixed;
@@ -137,6 +140,7 @@ img {text-decoration: none; border: 0px}
 </head>
 
 <body>
+<div class="normalcur">
 <!-- The video -->
 <video autoplay muted loop id="myVideo">
   <source src="videos\bg.mp4" type="video/mp4">
@@ -210,6 +214,7 @@ img {text-decoration: none; border: 0px}
 
 <div class="content-bottom-copyright disable-selection">
   <p>勇Online<br>Copyright &copy; 2019 勇Online. All Rights Reserved.</p>
+</div>
 </div>
 </body>
 

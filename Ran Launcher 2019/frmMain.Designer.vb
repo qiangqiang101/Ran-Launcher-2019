@@ -31,6 +31,7 @@ Partial Class frmMain
         '
         'html
         '
+        Me.html.AllowWebBrowserDrop = False
         Me.html.Dock = System.Windows.Forms.DockStyle.Fill
         Me.html.IsWebBrowserContextMenuEnabled = False
         Me.html.Location = New System.Drawing.Point(0, 0)
@@ -66,7 +67,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Black
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1344, 729)
         Me.Controls.Add(Me.html2)
         Me.Controls.Add(Me.html)

@@ -72,6 +72,7 @@ Partial Class frmUpdate
         '
         'html
         '
+        Me.html.AllowWebBrowserDrop = False
         Me.html.IsWebBrowserContextMenuEnabled = False
         Me.html.Location = New System.Drawing.Point(12, 23)
         Me.html.MinimumSize = New System.Drawing.Size(23, 23)

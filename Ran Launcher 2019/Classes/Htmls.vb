@@ -7,10 +7,15 @@ Module Htmls
     Public conf As Conf = New Conf(cfFile).Instance
     Public lang As Lang = New Lang(lgFile).Instance
 
-    Public MainHtml As String = "<head>
+    Public MainHtml As String = "<!DOCTYPE html>
+<html>
+<head>
 <title>" & lang.ServerName & "</title>
-<meta http-equiv=""X-UA-Compatible"" content=""IE=9"" charset=""utf-8"" />
+<meta http-equiv=""X-UA-Compatible"" content=""IE=" & IE_Version() & """ charset=""utf-8"" />
 <style>
+body {cursor: url('images\\normal.png'), url('images\\normal.cur'), auto !important;}
+a {cursor: url('images\\attack.png'), url('images\\attack.cur'), default !important;}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
 	position: fixed;
@@ -306,12 +311,13 @@ function repeatvideo() {
 	vidElem.currentTime = 15;
 	vidElem.play();
 }
-</script>"
+</script>
+</html>"
 
     Public UpdHtml As String = "<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv=""X-UA-Compatible"" content=""IE=9"" charset=""utf-8"" />
+<meta http-equiv=""X-UA-Compatible"" content=""IE=" & IE_Version() & """ charset=""utf-8"" />
 <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
 <style>
 * {box-sizing: border-box;}
@@ -442,10 +448,15 @@ function showSlides() {
 </body>
 </html>"
 
-    Public IntroHtml As String = "<head>
+    Public IntroHtml As String = "<!DOCTYPE html>
+<html>
+<head>
 <title>" & lang.ServerName & "</title>
-<meta http-equiv=""X-UA-Compatible"" content=""IE=9"" charset=""utf-8"" />
+<meta http-equiv=""X-UA-Compatible"" content=""IE=" & IE_Version() & """ charset=""utf-8"" />
 <style>
+body {cursor: url('images\\normal.png'), url('images\\normal.cur'), auto !important;}
+a {cursor: url('images\\attack.png'), url('images\\attack.cur'), default !important;}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
 	position: fixed;
@@ -465,13 +476,14 @@ function showSlides() {
 
 <body>
 <!-- The video -->
-<video autoplay muted id=""myVideo"">
+<video autoplay id=""myVideo"">
   <source src=""" & Application.StartupPath & "\data\launcher\videos\intro.mp4"" type=""video/mp4"">
 </video>
 </body>
 
 <script>
-</script>"
+</script>
+</html>"
 
     <Extension>
     Public Sub RunPage(browser As WebBrowser, html As String)

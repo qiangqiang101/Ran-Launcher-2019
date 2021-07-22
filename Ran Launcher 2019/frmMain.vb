@@ -1,6 +1,6 @@
 ﻿Public Class frmMain
 
-    Dim WithEvents doc As HtmlDocument
+    Dim WithEvents doc As System.Windows.Forms.HtmlDocument
     Private upd As New frmUpdate
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -131,5 +131,6 @@
             html.RunPage(MainHtml)
         End If
     End Sub
+
 
 End Class

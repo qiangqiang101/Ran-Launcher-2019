@@ -15,4 +15,5 @@
   <Unpacking>正在為您解壓資源包（過程不消耗流量）</Unpacking>
   <UnpackComplete>解壓完畢。</UnpackComplete>
   <CheckingForUpdate>正在查詢更新...</CheckingForUpdate>
+  <UpdateTitle>更新</UpdateTitle>
 </Lang>
