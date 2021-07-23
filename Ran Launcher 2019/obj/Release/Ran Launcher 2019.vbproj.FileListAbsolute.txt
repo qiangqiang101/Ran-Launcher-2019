@@ -41,7 +41,6 @@ C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Lau
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.exe
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.pdb
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.xml
-C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Ionic.Zip.dll
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran Launcher 2019.vbprojResolveAssemblyReference.cache
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmMain.resources
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmUpdate.resources

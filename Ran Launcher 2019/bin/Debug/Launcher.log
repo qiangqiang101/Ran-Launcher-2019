@@ -20,3 +20,15 @@
    at System.Windows.Forms.Control.set_Text(String value)
    at System.Windows.Forms.Label.set_Text(String value)
    at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 113
+7/24/2021 7:04:32 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 56
+7/24/2021 7:06:04 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 57
+7/24/2021 7:07:06 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 57
+7/24/2021 7:08:00 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 57

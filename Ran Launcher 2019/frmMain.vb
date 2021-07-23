@@ -37,7 +37,10 @@
                 html.Controls.Add(upd)
                 upd.TopMost = True
                 upd.Location = New Point(Width / 2 - upd.Width / 2, Height / 2 - upd.Height / 2)
-                upd.Show()
+                Try
+                    upd.Show()
+                Catch
+                End Try
         End Select
     End Sub
 
@@ -81,27 +84,7 @@
     End Sub
 
     Private Sub tKey_Tick(sender As Object, e As EventArgs) Handles tKey.Tick
-        If (GetAsyncKeyState(Keys.Escape) OrElse GetAsyncKeyState(Keys.Enter) OrElse GetAsyncKeyState(Keys.Space)) AndAlso html2.Visible Then
-            html2.Hide()
-            Select Case Htmls.conf.DisplayMethod
-                Case DisplayMethod.BuildIn
-                    html.RunPage(MainHtml)
-                Case DisplayMethod.Local
-                    Try
-                        html.Url = New Uri($".\data\launcher\{Htmls.conf.HtmlPath}")
-                    Catch ex As Exception
-                        Logger.Log(ex.Message, ex.StackTrace)
-                        ErrorFix(2)
-                    End Try
-                Case DisplayMethod.Remote
-                    Try
-                        html.Url = New Uri($"{Htmls.conf.HtmlPath}")
-                    Catch ex As Exception
-                        Logger.Log(ex.Message, ex.StackTrace)
-                        ErrorFix(2)
-                    End Try
-            End Select
-        End If
+        If (GetAsyncKeyState(Keys.Escape) OrElse GetAsyncKeyState(Keys.Enter) OrElse GetAsyncKeyState(Keys.Space)) AndAlso html2.Visible Then html2.Navigate("https://www.imnotmental.com/")
     End Sub
 
     Private Sub ErrorFix(data As Integer)

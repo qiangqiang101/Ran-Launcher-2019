@@ -7,7 +7,6 @@
   <Argument>app_run</Argument>
   <PatchAddress>http://inmtest.linkpc.net/update/download/</PatchAddress>
   <ServerVersion>http://inmtest.linkpc.net/update/ver.txt</ServerVersion>
-  <IntroWaitDuration>3500</IntroWaitDuration>
   <FullScreen>false</FullScreen>
   <DisplayMethod>BuildIn</DisplayMethod>
   <HtmlPath>index.html</HtmlPath>

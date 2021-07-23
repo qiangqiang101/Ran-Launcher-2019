@@ -56,3 +56,24 @@
    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
    at System.IO.Compression.ZipFileExtensions.ExtractToFile(ZipArchiveEntry source, String destinationFileName, Boolean overwrite)
    at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 119
+7/24/2021 12:53:59 AM:Unable to connect to the remote server   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 55
+7/24/2021 1:43:03 AM:Unable to connect to the remote server   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 55
+7/24/2021 4:37:34 AM:Unable to connect to the remote server   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 55
+7/24/2021 5:35:34 AM:Unable to connect to the remote server   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 59
+7/24/2021 6:05:33 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 61
+7/24/2021 6:08:40 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 61
+7/24/2021 7:08:38 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 57

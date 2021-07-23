@@ -55,6 +55,16 @@ a {cursor: url('images\\attack.png'), url('images\\attack.cur'), default !import
   margin-bottom: -4px;
 }
 
+.content-logo {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 200px;
+  height: 110px;
+  padding: 0px;
+}
+
 .content-select {
   position: fixed;
   top: 50%;
@@ -160,6 +170,10 @@ img {text-decoration: none; border: 0px}
 	<source src=""" & Application.StartupPath & "\data\launcher\bgm\intro.mp3"" type=""audio/mp3"">
 </audio>
 
+<div class=""content-logo disable-selection"">
+  <img draggable=""False"" src=""" & Application.StartupPath & "\data\launcher\images\logo.png"" style=""width200px;height:110px;opacity:0.9;filter:alpha(opacity=90);"">
+</div>
+
 <div class=""content-select disable-selection"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\select_server.png"" style=""width:200px;height:349px;opacity:0.9;filter:alpha(opacity=90);"">
   <p style=""position:absolute;left:5px;top:99px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.ServerName & "</p>
@@ -184,28 +198,28 @@ img {text-decoration: none; border: 0px}
 
 <div style=""display: none"" id=""help-window"" class=""help-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\help_window.png"" style=""width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);""> 
-  <iframe src=""" & Application.StartupPath & "\data\launcher\..\Help\help.htm"" height=""400"" width=""700"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
+  <iframe src=""" & Application.StartupPath & "\data\launcher\..\Help\help.htm"" height=""393"" width=""696"" style=""position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
   <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.HelpTitle & "</p>
   <a href=""#"" id=""closehelp"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""showhelp();"">&times;</a>
 </div>
 
 <div style=""display: none"" id=""news-window"" class=""news-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\help_window.png"" style=""width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);""> 
-  <iframe src=" & conf.NewsLink & " height=""400"" width=""700"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
+  <iframe src=" & conf.NewsLink & " height=""393"" width=""696"" style=""position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
   <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.NewsTitle & "</p>
   <a href=""#"" id=""closenews"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""shownews();"">&times;</a>
 </div>
 
 <div style=""display: none"" id=""website-window"" class=""website-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\website_window.png"" style=""width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);""> 
-  <iframe src=" & conf.WebsiteLink & " height=""564"" width=""1160"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
+  <iframe src=" & conf.WebsiteLink & " height=""555"" width=""1155"" style=""position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
   <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.WebsiteTitle & "</p>
   <a href=""#"" id=""closewebsite"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""showwebsite();"">&times;</a>
 </div>
 
 <div style=""display: none"" id=""register-window"" class=""register-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\website_window.png"" style=""width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);""> 
-  <iframe src=" & conf.RegisterLink & " height=""564"" width=""1160"" style=""position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
+  <iframe src=" & conf.RegisterLink & " height=""555"" width=""1155"" style=""position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
   <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.RegisterTitle & "</p>
   <a href=""#"" id=""closeregister"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""showregister();"">&times;</a>
 </div>

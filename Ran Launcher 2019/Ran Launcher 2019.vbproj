@@ -116,6 +116,9 @@
     <Compile Include="Classes\Language.vb" />
     <Compile Include="Classes\Logger.vb" />
     <Compile Include="Classes\PatchList.vb" />
+    <Compile Include="Controls\WebClientPlus.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>

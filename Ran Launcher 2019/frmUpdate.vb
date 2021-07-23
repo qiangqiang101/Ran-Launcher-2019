@@ -8,7 +8,7 @@ Imports System.Threading
 
 Public Class frmUpdate
 
-    Private WithEvents wc As New WebClient()
+    Private WithEvents wc As New WebClientPlus()
     Private cl As Client
     Private clFile As String = $"{Application.StartupPath}\Cver.xml"
 
@@ -22,6 +22,7 @@ Public Class frmUpdate
         Dim topTitle As String = $"{Application.StartupPath}\data\launcher\images\top_title.png"
         BackgroundImage = ImageFromFile(topTitle, My.Resources.top_title)
 
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12
         html.RunPage(UpdHtml)
         Label1.Text = Htmls.lang.UpdateTitle
         lblStatus.Text = Htmls.lang.CheckingForUpdate
@@ -38,6 +39,7 @@ Public Class frmUpdate
             lblStatus.Text = Htmls.lang.NoNewUpdate
             Wait(500)
             processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
+            Close()
             frmMain.Close()
         End If
     End Sub
@@ -51,9 +53,11 @@ Public Class frmUpdate
     Private Function CheckForUpdate() As Integer
         Try
             Application.DoEvents()
-            Dim client As WebClient = New WebClient()
-            Dim reader As StreamReader = New StreamReader(client.OpenRead(Htmls.conf.ServerVersion))
-            Return CInt(reader.ReadToEnd)
+            Using nwc As New WebClientPlus(3000)
+                Using sr = New StreamReader(nwc.OpenRead(Htmls.conf.ServerVersion))
+                    Return CInt(sr.ReadToEnd)
+                End Using
+            End Using
         Catch ex As Exception
             Logger.Log(ex.Message, ex.StackTrace)
             Return 0
@@ -145,6 +149,7 @@ Public Class frmUpdate
                 lblStatus.Text = Htmls.lang.NoNewUpdate
                 Wait(500)
                 processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
+                Close()
                 frmMain.Close()
             End If
         End If
@@ -184,5 +189,4 @@ Public Class frmUpdate
             temp = Nothing
         End If
     End Sub
-
 End Class
