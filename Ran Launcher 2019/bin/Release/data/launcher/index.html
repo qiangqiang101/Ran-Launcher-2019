@@ -140,10 +140,10 @@ img {text-decoration: none; border: 0px}
 </head>
 
 <body>
-<div class="normalcur">
 <!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="videos\bg.mp4" type="video/mp4">
+<video id="myVideo" onended="repeatvideo()" autoplay muted>
+    <source src="videos\bg.mp4" type="video/mp4">
+    <img src="images\bg.jpg" title="Your browser does not support the <video> tag">
 </video>
 
 <audio autoplay loop id="bgm">
@@ -174,28 +174,28 @@ img {text-decoration: none; border: 0px}
 
 <div style="display: none" id="help-window" class="help-window">
   <img draggable="false" src="images\help_window.png" style="width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);"> 
-  <iframe src="..\Help\help.htm" height="400" width="700" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <iframe src="..\Help\help.htm" height="393" width="696" style="position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
   <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">幫助</p>
   <a href="#" id="closehelp" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="showhelp();">&times;</a>
 </div>
 
 <div style="display: none" id="news-window" class="news-window">
   <img draggable="false" src="images\help_window.png" style="width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);"> 
-  <iframe src="http://www.yong-online.com.tw/boards.aspx" height="400" width="700" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <iframe src="http://www.yong-online.com.tw/boards.aspx" height="393" width="696" style="position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
   <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">新聞</p>
   <a href="#" id="closenews" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="shownews();">&times;</a>
 </div>
 
 <div style="display: none" id="website-window" class="website-window">
   <img draggable="false" src="images\website_window.png" style="width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);"> 
-  <iframe src="http://www.yong-online.com.tw" height="564" width="1160" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <iframe src="http://www.yong-online.com.tw" height="555" width="1155" style="position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
   <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">網站</p>
   <a href="#" id="closewebsite" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="showwebsite();">&times;</a>
 </div>
 
 <div style="display: none" id="register-window" class="register-window">
   <img draggable="false" src="images\website_window.png" style="width:1160px;height:580px;opacity:0.9;filter:alpha(opacity=90);"> 
-  <iframe src="https://www.9buddy.com/join_step01.aspx" height="564" width="1160" style="position:absolute;left:0px;top:16px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
+  <iframe src="https://www.9buddy.com/join_step01.aspx" height="555" width="1155" style="position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);"></iframe>
   <p style="position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;">註冊</p>
   <a href="#" id="closeregister" style="text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;" onmousedown="showregister();">&times;</a>
 </div>
@@ -214,7 +214,6 @@ img {text-decoration: none; border: 0px}
 
 <div class="content-bottom-copyright disable-selection">
   <p>勇Online<br>Copyright &copy; 2019 勇Online. All Rights Reserved.</p>
-</div>
 </div>
 </body>
 
@@ -296,5 +295,11 @@ function showregister() {
 	} else {
 		x.style.display = "none";
 	}
+}
+
+function repeatvideo() {
+	var vidElem = document.getElementById('myVideo');
+	vidElem.currentTime = 15;
+	vidElem.play();
 }
 </script>

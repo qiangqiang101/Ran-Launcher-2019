@@ -5,11 +5,11 @@
   <RegisterLink>https://www.9buddy.com/join_step01.aspx</RegisterLink>
   <GameExe>game.exe</GameExe>
   <Argument>app_run</Argument>
-  <PatchAddress>https://github.com/qiangqiang101/LaunchMenuUpdate/raw/master/download/</PatchAddress>
-  <ServerVersion>https://github.com/qiangqiang101/LaunchMenuUpdate/raw/master/ver.txt</ServerVersion>
+  <PatchAddress>http://inmtest.linkpc.net/update/download/</PatchAddress>
+  <ServerVersion>http://inmtest.linkpc.net/update/ver.txt</ServerVersion>
   <IntroWaitDuration>3500</IntroWaitDuration>
   <FullScreen>false</FullScreen>
-  <DisplayMethod>Local</DisplayMethod>
+  <DisplayMethod>BuildIn</DisplayMethod>
   <HtmlPath>index.html</HtmlPath>
   <IntroHtmlPath>intro.html</IntroHtmlPath>
 </Conf>

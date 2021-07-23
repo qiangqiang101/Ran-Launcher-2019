@@ -1,3 +1,22 @@
 7/22/2021 4:32:39 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
    at System.Uri..ctor(String uriString)
    at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
+23/07/2021 11:13:18 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
+23/07/2021 11:13:23 AM:The request was aborted: Could not create SSL/TLS secure channel.   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 55
+23/07/2021 11:13:23 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 17
+23/07/2021 11:20:17 AM:Error creating window handle.   at System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_WindowText()
+   at System.Windows.Forms.Control.get_Text()
+   at System.Windows.Forms.Label.get_Text()
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.Label.set_Text(String value)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 113

@@ -153,6 +153,7 @@ img {text-decoration: none; border: 0px}
 <!-- The video -->
 <video id=""myVideo"" onended=""repeatvideo()"" autoplay muted>
     <source src=""" & Application.StartupPath & "\data\launcher\videos\bg.mp4"" type=""video/mp4"">
+    <img src=""" & Application.StartupPath & "\data\launcher\images\bg.jpg"" title=""Your browser does not support the <video> tag"">
 </video>
 
 <audio autoplay loop id=""bgm"">
@@ -476,12 +477,15 @@ a {cursor: url('images\\attack.png'), url('images\\attack.cur'), default !import
 
 <body>
 <!-- The video -->
-<video autoplay id=""myVideo"">
+<video autoplay id=""myVideo"" onended=""repeatvideo()"">
   <source src=""" & Application.StartupPath & "\data\launcher\videos\intro.mp4"" type=""video/mp4"">
 </video>
 </body>
 
 <script>
+function repeatvideo() {
+	window.location.href = ""https://www.imnotmental.com/""
+}
 </script>
 </html>"
 

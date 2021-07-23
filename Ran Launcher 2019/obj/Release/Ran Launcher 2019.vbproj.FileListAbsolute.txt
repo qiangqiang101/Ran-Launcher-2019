@@ -29,7 +29,6 @@ E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Releas
 E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.exe
 E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.pdb
 E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.xml
-E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Ionic.Zip.dll
 E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran Launcher 2019.vbprojResolveAssemblyReference.cache
 E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmMain.resources
 E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmUpdate.resources

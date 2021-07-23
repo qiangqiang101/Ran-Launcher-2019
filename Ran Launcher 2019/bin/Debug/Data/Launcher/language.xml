@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Lang xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ServerName>勇Online</ServerName>
-  <Copyright>勇Online\nCopyright (c) 2019. All Rights Reserved.</Copyright>
+  <Copyright>勇Online\nCopyright (c) 2021. All Rights Reserved.</Copyright>
   <ExitMsg>是否要離開遊戲？</ExitMsg>
   <NewsTitle>新聞</NewsTitle>
   <HelpTitle>幫助</HelpTitle>
@@ -11,8 +11,12 @@
   <UpdateCancel>更新被終止。</UpdateCancel>
   <UpdateError>出現錯誤。</UpdateError>
   <DownloadComplete>下載完成，正在為您解壓資源包（過程不消耗流量）</DownloadComplete>
-  <DownloadRemaining>剩餘總下載量：</DownloadRemaining>
-  <Unpacking>正在為您解壓資源包（過程不消耗流量）</Unpacking>
+  <DownloadRemaining>正在下載</DownloadRemaining>
+  <OfFileSize>/</OfFileSize>
+  <Unpacking>正在為您解壓資源包...</Unpacking>
+  <OfFile>/</OfFile>
+  <File>個文件</File>
   <UnpackComplete>解壓完畢。</UnpackComplete>
   <CheckingForUpdate>正在查詢更新...</CheckingForUpdate>
+  <UpdateTitle>更新</UpdateTitle>
 </Lang>

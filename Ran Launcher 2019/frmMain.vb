@@ -1,6 +1,6 @@
 ﻿Public Class frmMain
 
-    Dim WithEvents doc As System.Windows.Forms.HtmlDocument
+    Dim WithEvents doc As HtmlDocument
     Private upd As New frmUpdate
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -63,19 +63,9 @@
         Select Case Htmls.conf.DisplayMethod
             Case DisplayMethod.BuildIn
                 html2.RunPage(IntroHtml)
-                Wait(Htmls.conf.IntroWaitDuration)
-                If html2.Visible Then
-                    html2.Hide()
-                    html.RunPage(MainHtml)
-                End If
             Case DisplayMethod.Local
                 Try
                     html2.Url = New Uri($".\data\launcher\{Htmls.conf.IntroHtmlPath}")
-                    Wait(Htmls.conf.IntroWaitDuration * 2)
-                    If html2.Visible Then
-                        html2.Hide()
-                        html.Url = New Uri($".\data\launcher\{Htmls.conf.HtmlPath}")
-                    End If
                 Catch ex As Exception
                     Logger.Log(ex.Message, ex.StackTrace)
                     ErrorFix(1)
@@ -83,11 +73,6 @@
             Case DisplayMethod.Remote
                 Try
                     html2.Url = New Uri($"{Htmls.conf.IntroHtmlPath}")
-                    Wait(Htmls.conf.IntroWaitDuration * 2)
-                    If html2.Visible Then
-                        html2.Hide()
-                        html.Url = New Uri($"{Htmls.conf.HtmlPath}")
-                    End If
                 Catch ex As Exception
                     Logger.Log(ex.Message, ex.StackTrace)
                     ErrorFix(1)
@@ -122,15 +107,15 @@
     Private Sub ErrorFix(data As Integer)
         If data = 1 Then
             html2.RunPage(IntroHtml)
-            Wait(Htmls.conf.IntroWaitDuration)
-            If html2.Visible Then
-                html2.Hide()
-                html.RunPage(MainHtml)
-            End If
         Else
             html.RunPage(MainHtml)
         End If
     End Sub
 
-
+    Private Sub html2_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles html2.Navigated
+        If e.Url.ToString = "https://www.imnotmental.com/" Then
+            html2.Hide()
+            html.RunPage(MainHtml)
+        End If
+    End Sub
 End Class

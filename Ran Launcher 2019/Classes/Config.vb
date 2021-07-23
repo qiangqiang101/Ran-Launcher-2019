@@ -19,7 +19,6 @@ Public Structure Conf
     Public Argument As String
     Public PatchAddress As String
     Public ServerVersion As String
-    Public IntroWaitDuration As Integer
     Public FullScreen As Boolean
     Public DisplayMethod As DisplayMethod
     Public HtmlPath As String

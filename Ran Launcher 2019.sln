@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ran Launcher 2019", "Ran Launcher 2019\Ran Launcher 2019.vbproj", "{CBAAF184-6BCA-4311-A7D4-75B3D0EA7CF8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DummyGame", "DummyGame\DummyGame.vbproj", "{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{CBAAF184-6BCA-4311-A7D4-75B3D0EA7CF8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBAAF184-6BCA-4311-A7D4-75B3D0EA7CF8}.Release|x86.ActiveCfg = Release|x86
 		{CBAAF184-6BCA-4311-A7D4-75B3D0EA7CF8}.Release|x86.Build.0 = Release|x86
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Debug|x86.Build.0 = Debug|Any CPU
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Release|x86.ActiveCfg = Release|Any CPU
+		{DFCF0016-AE91-4463-A82D-79FE5DD25D4C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

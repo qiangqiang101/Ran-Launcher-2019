@@ -24,7 +24,10 @@ Public Structure Lang
     Public UpdateError As String
     Public DownloadComplete As String
     Public DownloadRemaining As String
+    Public OfFileSize As String
+    Public File As String
     Public Unpacking As String
+    Public OfFile As String
     Public UnpackComplete As String
     Public CheckingForUpdate As String
     Public UpdateTitle As String
@@ -41,10 +44,10 @@ Public Structure Lang
     End Sub
 
     Public Function ReadFromFile() As Lang
-        If Not File.Exists(FileName) Then
+        If Not IO.File.Exists(FileName) Then
             Return New Lang(FileName) With {.ServerName = "ServerName", .Copyright = "Copyright", .ExitMsg = "ExitMsg", .NewsTitle = "NewsTitle", .HelpTitle = "HelpTitle", .WebsiteTitle = "WebsiteTitle", .RegisterTitle = "RegisterTitle", .NoNewUpdate = "NoNewUpdate",
                 .UpdateCancel = "UpdateCancel", .UpdateError = "UpdateError", .DownloadComplete = "DownloadComplete", .DownloadRemaining = "DownloadRemaining", .Unpacking = "Unpacking", .UnpackComplete = "UnpackComplete", .CheckingForUpdate = "CheckingForUpdate",
-                .UpdateTitle = "UpdateTitle"}
+                .UpdateTitle = "UpdateTitle", .OfFileSize = "OfFileSize", .OfFile = "OfFile", .File = "File"}
         End If
 
         Try
@@ -57,7 +60,7 @@ Public Structure Lang
             Logger.Log(ex.Message, ex.StackTrace)
             Return New Lang(FileName) With {.ServerName = "ServerName", .Copyright = "Copyright", .ExitMsg = "ExitMsg", .NewsTitle = "NewsTitle", .HelpTitle = "HelpTitle", .WebsiteTitle = "WebsiteTitle", .RegisterTitle = "RegisterTitle", .NoNewUpdate = "NoNewUpdate",
                 .UpdateCancel = "UpdateCancel", .UpdateError = "UpdateError", .DownloadComplete = "DownloadComplete", .DownloadRemaining = "DownloadRemaining", .Unpacking = "Unpacking", .UnpackComplete = "UnpackComplete", .CheckingForUpdate = "CheckingForUpdate",
-                .UpdateTitle = "UpdateTitle"}
+                .UpdateTitle = "UpdateTitle", .OfFileSize = "OfFileSize", .OfFile = "OfFile", .File = "File"}
         End Try
     End Function
 

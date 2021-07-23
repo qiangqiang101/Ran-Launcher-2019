@@ -6,6 +6,9 @@ Public Class RanProgressBar
     Dim _marqueeSteps As Single = CSng($"-{Width / 2}")
     Dim WithEvents tmMarquee As New Timer() With {.Interval = 10}
 
+    Dim ftbrush As New TextureBrush(fgImg, Drawing2D.WrapMode.Clamp)
+    Dim btbrush As New TextureBrush(bgImg, Drawing2D.WrapMode.Clamp)
+
     Private _backColor As Color = Color.FromArgb(96, 96, 96)
     <Category("Appearance")>
     Public Property BackgroundColor() As Color
@@ -92,22 +95,31 @@ Public Class RanProgressBar
         MyBase.OnPaint(e)
 
         Dim formGraphics As Graphics = e.Graphics
-        Dim sbrush As New SolidBrush(_frontcolor)
+        'Dim sbrush As New SolidBrush(_frontcolor)
 
         formGraphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
 
         If Not _val = 0 Then
-            If _style = PBStyle.Continuous Then
-                formGraphics.FillRectangle(sbrush, New RectangleF(0, 0, _val / _max * Width - 1, Height - 1))
+                If _style = PBStyle.Continuous Then
+                formGraphics.FillRectangle(ftbrush, New RectangleF(0, 0, _val / _max * Width - 1, Height - 1))
             End If
-        End If
+            End If
 
         If _style = PBStyle.Marquee Then
             Dim rectWidth As Single = Width / 2
-            formGraphics.FillRectangle(sbrush, New RectangleF(_marqueeSteps, 0, rectWidth, Height - 1))
+            formGraphics.FillRectangle(ftbrush, New RectangleF(_marqueeSteps, 0, rectWidth, Height - 1))
         End If
 
-        sbrush.Dispose()
+        'sbrush.Dispose()
+    End Sub
+
+    Protected Overrides Sub OnPaintBackground(pevent As PaintEventArgs)
+        MyBase.OnPaintBackground(pevent)
+
+        Dim formGraphics As Graphics = pevent.Graphics
+        formGraphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
+
+        formGraphics.FillRectangle(btbrush, ClientRectangle)
     End Sub
 
     Public Sub New()
@@ -137,4 +149,12 @@ Public Class RanProgressBar
         Continuous
         Marquee
     End Enum
+
+    Protected Overrides Sub Dispose(disposing As Boolean)
+        MyBase.Dispose(disposing)
+
+        ftbrush.Dispose()
+        btbrush.Dispose()
+    End Sub
+
 End Class

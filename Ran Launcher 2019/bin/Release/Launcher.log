@@ -1,199 +1,58 @@
-4/7/2019 9:29:28 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 6
-4/7/2019 9:29:35 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 6
-4/7/2019 9:46:00 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 6
-7/5/2019 3:14:45 AM:Object reference not set to an instance of an object.   at Ran_Launcher_2019.Htmls.RunPage(WebBrowser browser, String html) in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Htmls.vb:line 472
-7/5/2019 3:14:57 AM:Object reference not set to an instance of an object.   at Ran_Launcher_2019.Htmls.RunPage(WebBrowser browser, String html) in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Htmls.vb:line 472
-7/5/2019 3:15:14 AM:Object reference not set to an instance of an object.   at Ran_Launcher_2019.Htmls.RunPage(WebBrowser browser, String html) in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Htmls.vb:line 472
-7/5/2019 5:12:02 AM:There is an error in XML document (14, 73).   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
-   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
-   at Ran_Launcher_2019.Conf.ReadFromFile() in C:\Users\User\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Config.vb:line 47
-7/7/2019 2:26:15 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-7/7/2019 2:41:16 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-15/8/2019 7:33:12 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-15/8/2019 10:51:32 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-15/8/2019 11:19:27 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-15/8/2019 11:21:43 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-15/8/2019 11:22:44 PM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-7/22/2021 3:51:58 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 3:52:58 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 4:01:06 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 4:01:58 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-7/22/2021 4:34:13 AM:The type initializer for 'Ran_Launcher_2019.Htmls' threw an exception.
-7/22/2021 4:34:40 AM:The type initializer for 'Ran_Launcher_2019.Htmls' threw an exception.   at Ran_Launcher_2019.frmMain.frmMain_Load(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 8
-7/22/2021 4:39:57 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 4:40:25 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-7/22/2021 4:56:19 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 4:56:24 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-7/22/2021 5:08:18 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 5:09:06 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 5:16:06 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 5:23:53 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 5:24:36 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 6:02:51 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-7/22/2021 6:06:27 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-22/07/2021 9:26:59 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-22/07/2021 9:29:00 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 13
-22/07/2021 9:45:01 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 9:54:32 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 76
-22/07/2021 9:55:11 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 76
-22/07/2021 9:56:40 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:10:58 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:11:16 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+23/07/2021 8:26:29 AM:Could not find a part of the path 'E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\'.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Compression.ZipFileExtensions.ExtractToFile(ZipArchiveEntry source, String destinationFileName, Boolean overwrite)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 100
+23/07/2021 8:26:29 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
    at System.Diagnostics.Process.Start()
    at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
    at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
-22/07/2021 10:13:54 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:13:58 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.tKey_Tick(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 108
-22/07/2021 10:14:57 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:18:03 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:21:00 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:21:03 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.tKey_Tick(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 108
-22/07/2021 10:23:10 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:24:37 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:25:06 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:25:45 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 75
-22/07/2021 10:25:49 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.tKey_Tick(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 108
-22/07/2021 10:26:58 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 100
-22/07/2021 10:34:36 AM:Invalid URI: The format of the URI could not be determined.   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
-   at System.Uri..ctor(String uriString)
-   at Ran_Launcher_2019.frmMain.frmMain_Shown(Object sender, EventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmMain.vb:line 73
-22/07/2021 11:14:12 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+23/07/2021 8:29:26 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
    at System.Diagnostics.Process.Start()
    at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
    at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
-22/07/2021 11:16:35 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+23/07/2021 8:30:51 AM:Could not find a part of the path 'E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\'.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Compression.ZipFileExtensions.ExtractToFile(ZipArchiveEntry source, String destinationFileName, Boolean overwrite)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 100
+23/07/2021 8:31:52 AM:Could not find a part of the path 'E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\'.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Compression.ZipFileExtensions.ExtractToFile(ZipArchiveEntry source, String destinationFileName, Boolean overwrite)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 100
+23/07/2021 8:35:21 AM:Cannot create "E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\textures" because a file or directory with the same name already exists.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 103
+23/07/2021 8:38:17 AM:Cannot create "E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\textures" because a file or directory with the same name already exists.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 105
+23/07/2021 9:04:37 AM:Cannot create "E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\textures" because a file or directory with the same name already exists.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Ran_Launcher_2019.ZipArchiveExtensions.ExtractToDirectory(ZipArchive archive, String destinationDirectoryName, Boolean overwrite) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\ZipArchiveExtensions.vb:line 20
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 100
+23/07/2021 9:06:00 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
    at System.Diagnostics.Process.Start()
    at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
    at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
-22/07/2021 11:19:17 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
-22/07/2021 11:58:36 AM:Error creating window handle.   at System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
-   at System.Windows.Forms.Control.CreateHandle()
-   at System.Windows.Forms.Control.get_Handle()
-   at System.Windows.Forms.Control.get_WindowText()
-   at System.Windows.Forms.Control.get_Text()
-   at System.Windows.Forms.Label.get_Text()
-   at System.Windows.Forms.Control.set_Text(String value)
-   at System.Windows.Forms.Label.set_Text(String value)
-   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 84
-7/23/2021 7:21:31 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
-7/23/2021 7:24:57 AM:Could not connect to Serverhttp://inmtest.linkpc.net/update/ver.txt
-7/23/2021 7:24:57 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
-7/23/2021 7:25:56 AM:Unable to connect to the remote server   at System.Net.WebClient.OpenRead(Uri address)
-   at System.Net.WebClient.OpenRead(String address)
-   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 48
-7/23/2021 7:25:56 AM:The system cannot find the file specified   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
-   at System.Diagnostics.Process.Start()
-   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
-   at Ran_Launcher_2019.Helper.processStart(String filename, String arg, Form form) in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\Classes\Helper.vb:line 14
+23/07/2021 10:19:23 AM:The process cannot access the file 'E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\textures\lobi\paint.dds' because it is being used by another process.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Compression.ZipFileExtensions.ExtractToFile(ZipArchiveEntry source, String destinationFileName, Boolean overwrite)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 119
+23/07/2021 10:21:10 AM:The process cannot access the file 'E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\textures\map\ev_sbybd_b_sign_b.dds' because it is being used by another process.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Compression.ZipFileExtensions.ExtractToFile(ZipArchiveEntry source, String destinationFileName, Boolean overwrite)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 119
+23/07/2021 10:21:14 AM:The process cannot access the file 'E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\cache\NSimSun.9.516.0.1.dds' because it is being used by another process.   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Compression.ZipFileExtensions.ExtractToFile(ZipArchiveEntry source, String destinationFileName, Boolean overwrite)
+   at Ran_Launcher_2019.frmUpdate.BgWorker_DoWork(Object sender, DoWorkEventArgs e) in E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 119

@@ -7,6 +7,9 @@ Module Helper
     Public Declare Function SendMessage Lib "user32.dll" (ByVal hWnd As IntPtr, ByVal Msg As Integer, ByVal wParam As Integer, ByVal lParam As Integer) As Integer
     Public Declare Function EnableWindow Lib "user32.dll" (ByVal hWnd As IntPtr, ByVal bEnable As Boolean) As Boolean
 
+    Public bgImg As Image = ImageFromFile($"{Application.StartupPath}\data\launcher\images\progress2.png", My.Resources.progress2)
+    Public fgImg As Image = ImageFromFile($"{Application.StartupPath}\data\launcher\images\progress1.png", My.Resources.progress1)
+
     Public Sub processStart(ByVal filename As String, ByVal arg As String, form As Form)
         Try
             Dim proc As Process
@@ -108,6 +111,27 @@ Module Helper
 
     Public Function GetPercentage(count As Integer, total As Integer) As String
         Return $"{Math.Floor((count / total) * 100)}%"
+    End Function
+
+    Public Function SafeImageFromFile(path As String, Optional backup As Image = Nothing) As Image
+        If backup Is Nothing Then backup = New Bitmap(1, 1)
+        If File.Exists(path) Then
+            Using fs As New FileStream(path, FileMode.Open, FileAccess.Read)
+                Dim img = Image.FromStream(fs)
+                Return img
+            End Using
+        Else
+            Return backup
+        End If
+    End Function
+
+    Public Function ImageFromFile(path As String, Optional backup As Image = Nothing) As Image
+        If backup Is Nothing Then backup = New Bitmap(1, 1)
+        If File.Exists(path) Then
+            Return Image.FromFile(path)
+        Else
+            Return backup
+        End If
     End Function
 
 End Module

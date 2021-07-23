@@ -1,0 +1,11 @@
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\bin\Debug\Game.exe.config
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\bin\Debug\Game.exe
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\bin\Debug\Game.pdb
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\bin\Debug\Game.xml
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\obj\Debug\DummyGame.vbprojResolveAssemblyReference.cache
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\obj\Debug\DummyGame.frmGame.resources
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\obj\Debug\DummyGame.Resources.resources
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\obj\Debug\DummyGame.vbproj.GenerateResource.Cache
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\obj\Debug\Game.exe
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\obj\Debug\Game.xml
+E:\Users\Bartholomew\Documents\GitHub\RanLauncher19\DummyGame\obj\Debug\Game.pdb

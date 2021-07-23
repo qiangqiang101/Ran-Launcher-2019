@@ -3,7 +3,6 @@ Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
 Imports System.Threading
-Imports Ionic.Zip
 
 'note https://stackoverflow.com/questions/8236150/reading-an-online-xml-file-with-vb-net
 
@@ -20,9 +19,13 @@ Public Class frmUpdate
     Private Sub frmUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckForIllegalCrossThreadCalls = False
 
+        Dim topTitle As String = $"{Application.StartupPath}\data\launcher\images\top_title.png"
+        BackgroundImage = ImageFromFile(topTitle, My.Resources.top_title)
+
         html.RunPage(UpdHtml)
         Label1.Text = Htmls.lang.UpdateTitle
         lblStatus.Text = Htmls.lang.CheckingForUpdate
+        lblStatus2.Text = ""
 
         cl = New Client(clFile).Instance
         Dim cfu As Integer = CheckForUpdate()
@@ -31,7 +34,9 @@ Public Class frmUpdate
             DownloadUpdate()
             pbOverall.Maximum = cfu * 2
         Else
+            lblStatus2.Text = ""
             lblStatus.Text = Htmls.lang.NoNewUpdate
+            Wait(500)
             processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
             frmMain.Close()
         End If
@@ -39,7 +44,7 @@ Public Class frmUpdate
 
     Private Sub DownloadUpdate()
         Dim patchAddress As String = $"{Htmls.conf.PatchAddress}patch{cl.CurrentVersion + 1}.zip"
-        Dim patchFile As String = $"{Application.StartupPath}\patch.zip"
+        Dim patchFile As String = $"{Application.StartupPath}\patch{cl.CurrentVersion + 1}.zip"
         wc.DownloadFileAsync(New Uri(patchAddress), patchFile, Stopwatch.StartNew)
     End Sub
 
@@ -63,6 +68,7 @@ Public Class frmUpdate
         ElseIf Not e.Error Is Nothing Then
             lblStatus.Text = Htmls.lang.UpdateError
         Else
+            lblStatus2.Text = ""
             lblStatus.Text = Htmls.lang.DownloadComplete
             pbCurrent.Value = pbCurrent.Minimum
             pbOverall.Value += 1
@@ -73,35 +79,39 @@ Public Class frmUpdate
     Private Sub wc_DownloadProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs) Handles wc.DownloadProgressChanged
         pbCurrent.Value = e.ProgressPercentage
         Dim ds = (e.BytesReceived / (DirectCast(e.UserState, Stopwatch).ElapsedMilliseconds / 1000.0#))
-        lblStatus.Text = $"{Htmls.lang.DownloadRemaining}{GetFileSize(Math.Round(e.TotalBytesToReceive - e.BytesReceived))} - {GetDownloadSpeed(ds)} ({pbCurrent.Value}%)"
+        lblStatus2.Text = $"{Htmls.lang.DownloadRemaining}""patch{cl.CurrentVersion + 1}"" ({pbCurrent.Value}%)"
+        lblStatus.Text = $"{GetFileSize(Math.Round(e.BytesReceived))}{Htmls.lang.OfFileSize}{GetFileSize(Math.Round(e.TotalBytesToReceive))} - {GetDownloadSpeed(ds)}"
     End Sub
 
 #End Region
 
     Private Sub BgWorker_DoWork(sender As Object, e As DoWorkEventArgs) Handles bgworker.DoWork
-        Dim zipToUnpack As String = $"{Application.StartupPath}\patch.zip"
+        Dim zipToUnpack As String = $"{Application.StartupPath}\patch{cl.CurrentVersion + 1}.zip"
         Dim extractDir As String = Application.StartupPath
 
         Try
-            'Using DotNetZip
-            'Using zip As ZipFile = ZipFile.Read(zipToUnpack)
-            '    pbCurrent.Maximum = zip.Entries.Count
-            '    For Each entry As ZipEntry In zip
-            '        entry.Extract(extractDir, ExtractExistingFileAction.OverwriteSilently)
-            '        lblStatus.Text = $"{Htmls.lang.Unpacking} {pbCurrent.Value}/{pbCurrent.Maximum} ({GetPercentage(pbCurrent.Value, pbCurrent.Maximum)})"
-            '        pbCurrent.Value += 1
-            '        Thread.Sleep(1)
-            '    Next
-            'End Using
-
-            'Using DotNet4 Compression Zip
             If Not extractDir.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal) Then extractDir &= Path.DirectorySeparatorChar
-            Using zip As ZipArchive = Compression.ZipFile.OpenRead(zipToUnpack)
-                For Each entry In zip.Entries
-                    Dim destinationPath = Path.GetFullPath(Path.Combine(extractDir, entry.FullName))
-                    If destinationPath.StartsWith(extractDir, StringComparison.Ordinal) Then entry.ExtractToFile(destinationPath, True)
+            Using zip As ZipArchive = ZipFile.OpenRead(zipToUnpack)
+                pbCurrent.Maximum = zip.Entries.Count
+                Dim di As DirectoryInfo = Directory.CreateDirectory(extractDir)
+                Dim destinationDirectoryFullPath As String = di.FullName
 
-                    lblStatus.Text = $"{Htmls.lang.Unpacking} {pbCurrent.Value}/{pbCurrent.Maximum} ({GetPercentage(pbCurrent.Value, pbCurrent.Maximum)})"
+                For Each file As ZipArchiveEntry In zip.Entries
+                    Dim completeFileName As String = Path.GetFullPath(Path.Combine(destinationDirectoryFullPath, file.FullName))
+
+                    If Not completeFileName.StartsWith(destinationDirectoryFullPath, StringComparison.OrdinalIgnoreCase) Then
+                        Logger.Log("Trying to extract file outside of destination directory.", "")
+                    End If
+
+                    If file.Name = "" Then
+                        Directory.CreateDirectory(Path.GetDirectoryName(completeFileName))
+                        Continue For
+                    End If
+
+                    file.ExtractToFile(completeFileName, True)
+
+                    lblStatus2.Text = $"{Htmls.lang.Unpacking} ({GetPercentage(pbCurrent.Value, pbCurrent.Maximum)})"
+                    lblStatus.Text = $"{pbCurrent.Value}{Htmls.lang.OfFile}{pbCurrent.Maximum}{Htmls.lang.File} {file.FullName}"
                     pbCurrent.Value += 1
                     Thread.Sleep(1)
                 Next
@@ -124,13 +134,16 @@ Public Class frmUpdate
             cl.CurrentVersion = cl.CurrentVersion + 1
             cl.FileName = clFile
             cl.Save()
-            If File.Exists($"{Application.StartupPath}\patch.zip") Then File.Delete($"{Application.StartupPath}\patch.zip")
+            If File.Exists($"{Application.StartupPath}\patch{cl.CurrentVersion}.zip") Then File.Delete($"{Application.StartupPath}\patch{cl.CurrentVersion}.zip")
 
             If cl.CurrentVersion < CheckForUpdate() Then
+                lblStatus2.Text = ""
                 lblStatus.Text = Htmls.lang.CheckingForUpdate
                 DownloadUpdate()
             Else
+                lblStatus2.Text = ""
                 lblStatus.Text = Htmls.lang.NoNewUpdate
+                Wait(500)
                 processStart($"{Application.StartupPath}\{Htmls.conf.GameExe}", Htmls.conf.Argument, frmMain)
                 frmMain.Close()
             End If

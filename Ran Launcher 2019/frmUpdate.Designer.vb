@@ -28,6 +28,7 @@ Partial Class frmUpdate
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.bgworker = New System.ComponentModel.BackgroundWorker()
         Me.html = New System.Windows.Forms.WebBrowser()
+        Me.lblStatus2 = New System.Windows.Forms.Label()
         Me.pbOverall = New Ran_Launcher_2019.RanProgressBar()
         Me.pbCurrent = New Ran_Launcher_2019.RanProgressBar()
         Me.SuspendLayout()
@@ -45,9 +46,10 @@ Partial Class frmUpdate
         '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label2.Font = New System.Drawing.Font("Marlett", 10.0!)
         Me.Label2.Location = New System.Drawing.Point(676, 2)
         Me.Label2.Name = "Label2"
@@ -57,11 +59,12 @@ Partial Class frmUpdate
         '
         'lblStatus
         '
+        Me.lblStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblStatus.Location = New System.Drawing.Point(12, 257)
+        Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lblStatus.Location = New System.Drawing.Point(59, 274)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(676, 19)
+        Me.lblStatus.Size = New System.Drawing.Size(583, 19)
         Me.lblStatus.TabIndex = 4
         Me.lblStatus.Text = "正在查詢更新..."
         '
@@ -79,22 +82,34 @@ Partial Class frmUpdate
         Me.html.Name = "html"
         Me.html.ScriptErrorsSuppressed = True
         Me.html.ScrollBarsEnabled = False
-        Me.html.Size = New System.Drawing.Size(676, 199)
+        Me.html.Size = New System.Drawing.Size(676, 196)
         Me.html.TabIndex = 5
         Me.html.Url = New System.Uri("", System.UriKind.Relative)
         Me.html.WebBrowserShortcutsEnabled = False
         '
+        'lblStatus2
+        '
+        Me.lblStatus2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblStatus2.BackColor = System.Drawing.Color.Transparent
+        Me.lblStatus2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lblStatus2.Location = New System.Drawing.Point(59, 223)
+        Me.lblStatus2.Name = "lblStatus2"
+        Me.lblStatus2.Size = New System.Drawing.Size(583, 19)
+        Me.lblStatus2.TabIndex = 6
+        Me.lblStatus2.Text = "正在下載““””"
+        '
         'pbOverall
         '
+        Me.pbOverall.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.pbOverall.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.pbOverall.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.pbOverall.ForegroundColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.pbOverall.Location = New System.Drawing.Point(12, 244)
+        Me.pbOverall.Location = New System.Drawing.Point(59, 261)
         Me.pbOverall.MarqueeAnimationSpeed = 5.0!
         Me.pbOverall.Maximum = 100
         Me.pbOverall.Minimum = 0
         Me.pbOverall.Name = "pbOverall"
-        Me.pbOverall.Size = New System.Drawing.Size(676, 10)
+        Me.pbOverall.Size = New System.Drawing.Size(583, 10)
         Me.pbOverall.Style = Ran_Launcher_2019.RanProgressBar.PBStyle.Continuous
         Me.pbOverall.TabIndex = 3
         Me.pbOverall.Text = "RanProgressBar2"
@@ -102,15 +117,16 @@ Partial Class frmUpdate
         '
         'pbCurrent
         '
+        Me.pbCurrent.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.pbCurrent.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.pbCurrent.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.pbCurrent.ForegroundColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.pbCurrent.Location = New System.Drawing.Point(12, 228)
+        Me.pbCurrent.Location = New System.Drawing.Point(59, 245)
         Me.pbCurrent.MarqueeAnimationSpeed = 5.0!
         Me.pbCurrent.Maximum = 100
         Me.pbCurrent.Minimum = 0
         Me.pbCurrent.Name = "pbCurrent"
-        Me.pbCurrent.Size = New System.Drawing.Size(676, 10)
+        Me.pbCurrent.Size = New System.Drawing.Size(583, 10)
         Me.pbCurrent.Style = Ran_Launcher_2019.RanProgressBar.PBStyle.Continuous
         Me.pbCurrent.TabIndex = 2
         Me.pbCurrent.Text = "RanProgressBar1"
@@ -121,9 +137,9 @@ Partial Class frmUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.BackgroundImage = Global.Ran_Launcher_2019.My.Resources.Resources.top_title
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(700, 288)
+        Me.ClientSize = New System.Drawing.Size(700, 302)
+        Me.Controls.Add(Me.lblStatus2)
         Me.Controls.Add(Me.html)
         Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.pbOverall)
@@ -151,4 +167,5 @@ Partial Class frmUpdate
     Friend WithEvents lblStatus As Label
     Friend WithEvents bgworker As System.ComponentModel.BackgroundWorker
     Friend WithEvents html As WebBrowser
+    Friend WithEvents lblStatus2 As Label
 End Class
