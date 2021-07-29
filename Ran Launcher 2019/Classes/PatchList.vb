@@ -46,6 +46,7 @@ End Structure
 
 Public Structure PatchFile
 
+    Public Directory As String
     Public File As String
     Public Md5 As String
 

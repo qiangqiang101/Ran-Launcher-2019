@@ -126,6 +126,12 @@
       <DependentUpon>frmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmNewUpdate.Designer.vb">
+      <DependentUpon>frmNewUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUpdate.Designer.vb">
       <DependentUpon>frmUpdate.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewUpdate.resx">
+      <DependentUpon>frmNewUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdate.resx">
       <DependentUpon>frmUpdate.vb</DependentUpon>

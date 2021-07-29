@@ -96,7 +96,7 @@ Partial Class frmUpdate
         Me.lblStatus2.Name = "lblStatus2"
         Me.lblStatus2.Size = New System.Drawing.Size(583, 19)
         Me.lblStatus2.TabIndex = 6
-        Me.lblStatus2.Text = "正在下載““””"
+        Me.lblStatus2.Text = "正在下載"""""
         '
         'pbOverall
         '
@@ -154,7 +154,7 @@ Partial Class frmUpdate
         Me.Name = "frmUpdate"
         Me.Opacity = 0.8R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmUpdate"
+        Me.Text = "Update"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

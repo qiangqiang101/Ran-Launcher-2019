@@ -198,7 +198,7 @@ img {text-decoration: none; border: 0px}
 
 <div style=""display: none"" id=""help-window"" class=""help-window"">
   <img draggable=""false"" src=""" & Application.StartupPath & "\data\launcher\images\help_window.png"" style=""width:700px;height:416px;opacity:0.9;filter:alpha(opacity=90);""> 
-  <iframe src=""" & Application.StartupPath & "\data\launcher\..\Help\help.htm"" height=""393"" width=""696"" style=""position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
+  <iframe src=""" & Application.StartupPath & "\data\Help\help.htm"" height=""393"" width=""696"" style=""position:absolute;left:2px;top:22px;border:none;opacity:0.9;filter:alpha(opacity=90);""></iframe>
   <p style=""position:absolute;left:10px;top:-10px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:14px;"">" & lang.HelpTitle & "</p>
   <a href=""#"" id=""closehelp"" style=""text-decoration:none;position:absolute;right:5px;top:-6px;color:#f1f1f1;font-family:'Arial', Helvetica, sans-serif;font-size:25px;"" onmousedown=""showhelp();"">&times;</a>
 </div>

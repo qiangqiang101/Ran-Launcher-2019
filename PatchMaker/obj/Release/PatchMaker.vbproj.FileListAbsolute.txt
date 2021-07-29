@@ -1,0 +1,11 @@
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.exe.config
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.exe
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.pdb
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.xml
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.vbprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.Resources.resources
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.vbproj.GenerateResource.Cache
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.exe
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.xml
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.pdb
+C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.frmPatchMaker.resources
