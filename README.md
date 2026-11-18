@@ -47,7 +47,7 @@ msbuild "Ran Launcher 2019.sln" /p:Configuration=Release
 
 ## Releases
 
-Publishing a GitHub release automatically builds the launcher and Patch Maker for `Release|Any CPU` on a Windows runner. The workflow separates their outputs into `Launcher` and `PatchMaker` folders and includes the `Optional` assets in the build artifact. DummyGame is not built by the workflow.
+Publishing a GitHub release automatically builds the launcher and Patch Maker for `Release|Any CPU` on a Windows runner. The workflow separates their outputs into `Launcher` and `PatchMaker` folders and includes the `Optional` assets. Published releases receive a ZIP archive uploaded directly to the release, and the package is also available as a GitHub Actions artifact. DummyGame is not built by the workflow.
 
 The workflow can also be started manually from the repository's **Actions** tab.
 

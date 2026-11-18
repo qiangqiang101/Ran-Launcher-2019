@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -46,3 +46,18 @@ jobs:
           name: RanLauncher19-${{ github.ref_name }}
           path: ReleasePackage/
           if-no-files-found: error
+
+      - name: Create release archive
+        if: github.event_name == 'release'
+        shell: pwsh
+        run: |
+          $tag = "${{ github.event.release.tag_name }}"
+          $archiveName = "RanLauncher19-$tag.zip"
+          Compress-Archive -Path "ReleasePackage\*" -DestinationPath $archiveName -Force
+
+      - name: Attach archive to GitHub release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: gh release upload "${{ github.event.release.tag_name }}" "RanLauncher19-${{ github.event.release.tag_name }}.zip" --clobber
