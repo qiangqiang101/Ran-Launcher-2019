@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lang xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ServerName>RAN Online</ServerName>
+  <Copyright>RAN Online\nCopyright (c) 2021. All Rights Reserved.</Copyright>
+  <ExitMsg>Are you sure you want to quit?</ExitMsg>
+  <NewsTitle>News</NewsTitle>
+  <HelpTitle>Help</HelpTitle>
+  <WebsiteTitle>Website</WebsiteTitle>
+  <RegisterTitle>Sign Up</RegisterTitle>  
+  <NoNewUpdate>No New Update.</NoNewUpdate>
+  <UpdateCancel>Update Cancelled.</UpdateCancel>
+  <UpdateError>An Error Occurred.</UpdateError>
+  <DownloadComplete>Download is complete, decompressing data... (The process doesn't consume data)</DownloadComplete>
+  <DownloadRemaining>Downloading </DownloadRemaining>
+  <OfFileSize> of </OfFileSize>
+  <Unpacking>Decompressing data...</Unpacking>
+  <OfFile> of </OfFile>
+  <File>files</File>
+  <UnpackComplete>Decompression is complete.</UnpackComplete>
+  <CheckingForUpdate>Checking for update...</CheckingForUpdate>
+  <UpdateTitle>Update</UpdateTitle>
+</Lang>

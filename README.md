@@ -8,11 +8,26 @@ Windows game launcher and patch-management tools for a Ran Online-style game ser
 - **PatchMaker** - WinForms utility for preparing patch content.
 - **DummyGame** - Minimal test game executable used to exercise launcher behavior.
 
-## Requirements
+## Features
 
-- Windows
+- Autopatch
+- Register/Website Browser
+- News/Help Browser
+- Fully customize-able
+- Video Intro
+- Background Video
+- Window Mode/Full Screen switch runtime
+
+## System Requirements
+
+- Windows Vista/7/8/8.1/10/11
+- Microsoft .NET Framework 4.5.2
+- Screen resolution 1024 x 768 or higher
+
+## Development Requirements
+
 - Visual Studio 2015 or newer with the .NET desktop development workload
-- .NET Framework 4.5.2
+- Microsoft .NET Framework 4.5.2 Developer Pack
 
 The solution targets **Any CPU** by default. The launcher also has x86 build configurations.
 
@@ -29,6 +44,12 @@ To build from a Developer Command Prompt:
 ```bat
 msbuild "Ran Launcher 2019.sln" /p:Configuration=Release
 ```
+
+## Releases
+
+Publishing a GitHub release automatically builds the launcher and Patch Maker for `Release|Any CPU` on a Windows runner. The workflow separates their outputs into `Launcher` and `PatchMaker` folders and includes the `Optional` assets in the build artifact. DummyGame is not built by the workflow.
+
+The workflow can also be started manually from the repository's **Actions** tab.
 
 ## Configuration
 
@@ -58,6 +79,28 @@ Run `PatchMaker.exe`, select an input directory and output directory, and start 
 ### Dummy Game
 
 Run `DummyGame.exe` or `Game.exe` as the test game executable. It can be used to verify launcher-to-game process integration.
+
+## Changelogs
+
+### 1.4
+
+- Fixed intro video was muted by default.
+- Fixed a few more Chinese words that could not be replaced.
+- Fixed the update window image slider allowing drag and drop into the main window, which caused glitches.
+- Improved unpack patch file speed.
+- Improved iFrame location and sizes.
+- RAN logo is now separated from the main window.
+- Updater now displays download speed and the last unpacked files.
+- Added local HTML support.
+- Added the new EP10 GUI interface. The old GUI can be found in the Optional folder.
+- Added a new updater progress bar style.
+- Added a fallback to use `bg.jpg` when the player's IE browser version does not support the background video.
+
+### 1.3
+
+- Added full English support for the update module.
+- Improved background video looping; the first 15 seconds are now skipped.
+- Added local HTML support.
 
 ## License
 

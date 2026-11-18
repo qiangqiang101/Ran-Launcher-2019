@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>勇Online</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8" />
+<style>
+body {cursor:url('images\\normal.png'), url('images\\normal.cur'), auto;}
+a {cursor:url('images\\attack.png'), url('images\\attack.cur'), default;}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+</style>
+</head>
+
+<body>
+<!-- The video -->
+<video id="myVideo" onended="repeatvideo()" autoplay>
+  <source src="videos\intro.mp4" type="video/mp4">
+</video>
+</body>
+
+<script>
+function repeatvideo() {
+	window.location.href = "https://www.imnotmental.com/"
+}
+</script>
+</html>

@@ -1,0 +1,48 @@
+name: Build Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Windows binaries
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Install .NET Framework 4.5.2 Developer Pack
+        run: choco install netfx-4.5.2-devpack --no-progress -y
+
+      - name: Restore and build solution
+        run: |
+          msbuild "Ran Launcher 2019\Ran Launcher 2019.vbproj" /t:Restore /p:Configuration=Release /p:Platform=AnyCPU
+          msbuild "Ran Launcher 2019\Ran Launcher 2019.vbproj" /t:Build /p:Configuration=Release /p:Platform=AnyCPU
+          msbuild "PatchMaker\PatchMaker.vbproj" /t:Restore /p:Configuration=Release /p:Platform=AnyCPU
+          msbuild "PatchMaker\PatchMaker.vbproj" /t:Build /p:Configuration=Release /p:Platform=AnyCPU
+
+      - name: Package Optional files
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path "ReleasePackage" | Out-Null
+          New-Item -ItemType Directory -Force -Path "ReleasePackage\Launcher" | Out-Null
+          New-Item -ItemType Directory -Force -Path "ReleasePackage\PatchMaker" | Out-Null
+          Copy-Item -Recurse -Force "Ran Launcher 2019\bin\Release\*" "ReleasePackage\Launcher"
+          Copy-Item -Recurse -Force "PatchMaker\bin\Release\*" "ReleasePackage\PatchMaker"
+          Copy-Item -Recurse -Force "Optional" "ReleasePackage"
+
+      - name: Upload launcher artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: RanLauncher19-${{ github.ref_name }}
+          path: ReleasePackage/
+          if-no-files-found: error
