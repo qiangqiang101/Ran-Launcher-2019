@@ -48,7 +48,7 @@ Public Structure PatchFile
 
     Public Sub New(_file As String)
         File = Path.GetFileName(_file)
-        Directory = 
+        Directory = ""
     End Sub
 
     Public Directory As String

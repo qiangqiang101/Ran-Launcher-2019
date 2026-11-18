@@ -47,3 +47,18 @@ C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.Resources.resources
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran Launcher 2019.vbproj.GenerateResource.Cache
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmNewUpdate.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.exe.config
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.exe
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.pdb
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\bin\Release\Launcher.xml
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran Launcher 2019.vbproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Launcher.exe.config
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmMain.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmNewUpdate.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.frmUpdate.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran_Launcher_2019.Resources.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran Launcher 2019.vbproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Ran Launcher 2019.vbproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Launcher.exe
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Launcher.xml
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\obj\Release\Launcher.pdb

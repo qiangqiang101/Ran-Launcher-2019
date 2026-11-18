@@ -9,3 +9,16 @@ C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.xml
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.pdb
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.frmPatchMaker.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.vbproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.exe.config
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.frmPatchMaker.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.Resources.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.vbproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.vbproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.exe
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.xml
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\obj\Release\PatchMaker.pdb
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.exe.config
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.exe
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.pdb
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\PatchMaker\bin\Release\PatchMaker.xml

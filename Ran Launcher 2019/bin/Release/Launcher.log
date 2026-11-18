@@ -77,3 +77,6 @@
 7/24/2021 7:08:38 AM:The operation has timed out   at System.Net.WebClient.OpenRead(Uri address)
    at System.Net.WebClient.OpenRead(String address)
    at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\Lenovo\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 57
+18/11/2026 11:46:32 AM:The remote name could not be resolved: 'inmtest.linkpc.net'   at System.Net.WebClient.OpenRead(Uri address)
+   at System.Net.WebClient.OpenRead(String address)
+   at Ran_Launcher_2019.frmUpdate.CheckForUpdate() in C:\Users\ADMIN\Documents\GitHub\RanLauncher19\Ran Launcher 2019\frmUpdate.vb:line 57

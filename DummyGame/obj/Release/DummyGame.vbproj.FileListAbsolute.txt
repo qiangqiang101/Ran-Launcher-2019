@@ -19,3 +19,16 @@ C:\Users\Lenovo\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\DummyGame.v
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\Game.exe
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\Game.xml
 C:\Users\Lenovo\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\Game.pdb
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\bin\Release\Game.exe.config
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\bin\Release\Game.exe
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\bin\Release\Game.pdb
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\bin\Release\Game.xml
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\DummyGame.vbproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\Game.exe.config
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\DummyGame.frmGame.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\DummyGame.Resources.resources
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\DummyGame.vbproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\DummyGame.vbproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\Game.exe
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\Game.xml
+C:\Users\ADMIN\Documents\GitHub\RanLauncher19\DummyGame\obj\Release\Game.pdb
